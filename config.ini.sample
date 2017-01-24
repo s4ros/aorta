@@ -1,9 +1,10 @@
 [twitch]
-username = your_twitch_login
+username = your_bot_twitch_login
 oauth = your_oauth_key
 channel = #your_twitch_channel
 server = irc.chat.twitch.tv
 port = 6667
+owner = your_twitch_login
 
 [revlo]
 api_key = zxcasdqwe123

@@ -42,6 +42,7 @@ class Aorta(irc.bot.SingleServerIRCBot):
     password = parser.get('twitch', 'oauth')
     channel = parser.get('twitch', 'channel')
     api_key = parser.get('revlo', 'api_key')
+    self.owner = parser.get('twitch', 'owner')
 
     irc.bot.SingleServerIRCBot.__init__(self, [(server,port,password)], nickname, nickname)
     self.channel = channel
@@ -81,13 +82,13 @@ class Aorta(irc.bot.SingleServerIRCBot):
       try:
         soup = BeautifulSoup(urllib2.urlopen(url))
       except:
-        c.privmsg(e.target, u' ↳ FATAL error during opening '+url)
+        c.privmsg(self.owner, u' ↳ FATAL error during opening '+url)
         return
       if soup.title:
         # print(soup.title.string.strip('\n'))
         c.privmsg(e.target, u' ↳title: ' + ''.join(soup.title.string.strip('\n')))
       else:
-        c.privmsg(e.target, u' ↳title: <Unknown>! :[ ')
+        c.privmsg(e.target, u' ↳title: <Unknown>! DansGame')
 
 # --------------------------------------------
 # -- on_join()
