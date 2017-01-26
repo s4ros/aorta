@@ -8,3 +8,10 @@ owner = your_twitch_login
 
 [revlo]
 api_key = zxcasdqwe123
+
+[email]
+login = your@email.login
+passwd = your.email.p@ssw0rd
+smtp = smtp.email.server.com
+to = recipent@address.com
+subject_prefix = [Aorta Twitch Bot]
