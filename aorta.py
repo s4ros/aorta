@@ -99,5 +99,6 @@ class Aorta(irc.bot.SingleServerIRCBot):
 
 ###################
 #
-bot = Aorta()
-bot.start()
+if __name__ == "__main__":
+  bot = Aorta()
+  bot.start()

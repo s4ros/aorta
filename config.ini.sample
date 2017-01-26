@@ -1,3 +1,6 @@
+[aorta]
+dbfile = aorta.sqlite
+
 [twitch]
 username = your_bot_twitch_login
 oauth = your_oauth_key
