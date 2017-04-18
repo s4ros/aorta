@@ -3,6 +3,8 @@ dbfile = aorta.sqlite
 
 [twitch]
 username = your_bot_twitch_login
+; you can obtain your OAuth key from below URL
+; http://www.twitchapps.com/tmi/
 oauth = your_oauth_key
 channel = #your_twitch_channel
 server = irc.chat.twitch.tv
@@ -10,6 +12,8 @@ port = 6667
 owner = your_twitch_login
 
 [revlo]
+; you can obtain Revlo API key from below URL
+; https://www.revlo.co/settings/api
 api_key = zxcasdqwe123
 
 [email]
