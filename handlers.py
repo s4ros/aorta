@@ -48,7 +48,6 @@ def handle_JOIN(s, *params):
 
 # ----------------------------------------------------------------
 def handle_PART(s, *params):
-    # print "PART - {}".format(who.split('!',1)[0])
     pass
 
 # ----------------------------------------------------------------
@@ -65,14 +64,7 @@ def handle_PRIVMSG(s, *params):
         params = (username, cmd)
         if cmd in commands:
             commands[cmd](s, *params)
-
-    # print "------------PRIVMSG----------"
-    # print "User: {}, Odznaki/Ikonki: {}".format(username,badges)
-    # print "PRIVMSG: {}".format(text)
-    # print "COMMAND: {}".format(cmd)
     print "[{}]> {}".format(username, text)
-    # print "------ PRIVMSG ------"
-    # print ""
 
 # ----------------------------------------------------------------
 def handle_USERNOTICE(s, *params):

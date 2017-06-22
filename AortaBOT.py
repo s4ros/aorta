@@ -14,7 +14,6 @@ import settings
 
 # import handlers and commands
 from handlers import *
-# from commands import *
 
 class asocket(object):
     def __init__(self, *param):

@@ -13,6 +13,8 @@ NICK = 'bot_nickname'
 PASS = 'oauth:youroauthsecretkey'
 # your channel - twitch name
 CHANNEL = 'channel'
+# Channel owner/streamer nickname (probably the same as CHANNEL)
+OWNER = 'your_nick'
 
 # you should use your own local_settings.py settings
 try:

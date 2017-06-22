@@ -9,15 +9,15 @@ import random
 
 def chan_msg(s, message):
     s.send("PRIVMSG #{} :{}".format(settings.CHANNEL, message))
-
 # ----------------------------------------------------------------
 def command_halt(s, *params):
-    """
-    !halt - shutdown the bot
-    """
-    chan_msg(s, "Hereby, I'm sentenced to death. Good bye, cruel world!")
-    chan_msg(s, "/me going offline.")
-    sys.exit(0)
+    username = params[0]
+    if username == settings.OWNER:
+        chan_msg(s, "Hereby, I'm sentenced to death. Good bye, cruel world!")
+        chan_msg(s, "/me going offline.")
+        sys.exit(0)
+    else:
+        chan_msg(s, "Sorry, only {} can do that".format(settings.OWNER))
 # ----------------------------------------------------------------
 def command_test(s, *params):
     username = params[0]
@@ -34,7 +34,15 @@ def command_ruletka(s, *params):
         txt=txt+" KLIK.. Bębenek był pusty. {} żyje dalej.".format(username)
     chan_msg(s, txt)
 # ----------------------------------------------------------------
-
+def command_commands(s, *params):
+    commands = {}
+    for key, value in globals().items():
+        if key.startswith("command_"):
+            commands[key[8:]] = value
+    txt = ""
+    for cmd in commands:
+        txt += "!{}, ".format(cmd)
+    chan_msg(s, "Dostępne polecenia: "+txt)
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
