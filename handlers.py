@@ -52,9 +52,6 @@ def handle_PART(s, *params):
 
 # ----------------------------------------------------------------
 def handle_PRIVMSG(s, *params):
-    print ""
-    # print "------ PRIVMSG ------"
-    # print params
     username = params[1].split('!',1)[0][1:]
     text = params[3].split(':',1)[1]
     badges = params[0][8:].split(';',1)[0]
@@ -64,6 +61,7 @@ def handle_PRIVMSG(s, *params):
         params = (username, cmd)
         if cmd in commands:
             commands[cmd](s, *params)
+            time.sleep(0.3)
     print "[{}]> {}".format(username, text)
 
 # ----------------------------------------------------------------

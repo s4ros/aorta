@@ -39,12 +39,6 @@ class AortaBOT(object):
                 self.handlers[key[7:]] = value
                 print "New handler registered: {} = {}".format(key, value)
     # ---
-    def init_commands(self):
-        for key, value in globals().items():
-            if key.startswith("command_"):
-                self.commands[key[8:]] = value
-                print "New command registered: {} = {}".format(key, value)
-    # ---
     def init_socket(self):
         try:
             self._socket = asocket(socket.AF_INET, socket.SOCK_STREAM)
@@ -82,15 +76,13 @@ class AortaBOT(object):
                     pass
                 print "\n"
                 print params
-                print "\n"
                 if action in self.handlers:
                     self.handlers[action](self._socket, *params)
                     print "-- Handler action required: {}".format(action)
                 else:
                     print "-- NO HANDLER found for {}".format(action)
                     print msg
-                    print "----------"
-                    print ""
+                    print "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             except Queue.Empty:
                 pass
 
