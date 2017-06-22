@@ -42,8 +42,9 @@ def handle_PING(s, *params):
 
 # ----------------------------------------------------------------
 def handle_JOIN(s, *params):
-    print "JOIN - {}".format(params[0].split('!',1)[0])
-    pass
+    username = params[0][1:].split('!')[0]
+    if username.lower() == settings.NICK:
+        s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
 
 # ----------------------------------------------------------------
 def handle_PART(s, *params):
@@ -53,8 +54,8 @@ def handle_PART(s, *params):
 # ----------------------------------------------------------------
 def handle_PRIVMSG(s, *params):
     print ""
-    print "------ PRIVMSG ------"
-    print params
+    # print "------ PRIVMSG ------"
+    # print params
     username = params[1].split('!',1)[0][1:]
     text = params[3].split(':',1)[1]
     badges = params[0][8:].split(';',1)[0]
@@ -70,8 +71,8 @@ def handle_PRIVMSG(s, *params):
     # print "PRIVMSG: {}".format(text)
     # print "COMMAND: {}".format(cmd)
     print "[{}]> {}".format(username, text)
-    print "------ PRIVMSG ------"
-    print ""
+    # print "------ PRIVMSG ------"
+    # print ""
 
 # ----------------------------------------------------------------
 def handle_USERNOTICE(s, *params):

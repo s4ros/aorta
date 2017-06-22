@@ -30,15 +30,9 @@ class AortaBOT(object):
     # ---
     def __init__(self):
         print(self)
-        # initialize dict() to keep all handlers
         self.handlers = {}
         self.init_handlers()
-        # initialize dict() to keep all commands
-        # self.commands = {}
-        # self.init_commands()
-        # initialize messages Queue (for ReceiverThread mostly)
         self.queue = Queue.Queue()
-        print globals()
     # ---
     def init_handlers(self):
         for key, value in globals().items():
@@ -79,7 +73,6 @@ class AortaBOT(object):
         while True:
             try:
                 msg = self.queue.get(timeout=0.1)
-                # print msg
                 if msg[0] == ':':
                     who, action, content = msg.split(' ', 2)
                     params = (who, action, content)
@@ -88,7 +81,9 @@ class AortaBOT(object):
                     params = (badges, who, action, content)
                 else:
                     pass
-                # print params
+                print "\n"
+                print params
+                print "\n"
                 if action in self.handlers:
                     self.handlers[action](self._socket, *params)
                     print "-- Handler action required: {}".format(action)

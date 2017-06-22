@@ -16,12 +16,12 @@ def command_halt(s, *params):
     !halt - shutdown the bot
     """
     chan_msg(s, "Hereby, I'm sentenced to death. Good bye, cruel world!")
+    chan_msg(s, "/me going offline.")
     sys.exit(0)
 # ----------------------------------------------------------------
 def command_test(s, *params):
     username = params[0]
     chan_msg(s,"Hello {}! It's a successful test command execution.".format(username))
-    pass
 # ----------------------------------------------------------------
 def command_ruletka(s, *params):
     username = params[0]
