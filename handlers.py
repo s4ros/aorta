@@ -3,10 +3,22 @@
 # ----------------------------------------------------------------------------
 
 import settings
+import random
+import time
 from commands import *
 
-commands = {}
+# ----------------------------------------------------------------------------
+# static vars decorator
+def static_vars(**kwargs):
+    def decorate(func):
+        for k in kwargs:
+            setattr(func, k, kwargs[k])
+        return func
+    return decorate
+# ----------------------------------------------------------------------------
 
+# bot commands initialization function
+commands = {}
 def init_commands(commands):
     for key, value in globals().items():
         if key.startswith("command_"):
@@ -51,7 +63,15 @@ def handle_PART(s, *params):
     pass
 
 # ----------------------------------------------------------------
+@static_vars(counter=0)
 def handle_PRIVMSG(s, *params):
+    if settings.adv:
+        handle_PRIVMSG.counter += 1
+        if handle_PRIVMSG.counter >= settings.adv_step:
+            num = random.randint(0,len(settings.adverts)-1)
+            print "\n::::: NUM ::::: {} ::::::".format(num)
+            s.send("PRIVMSG #{} :{}".format(settings.CHANNEL, settings.adverts[num]))
+            handle_PRIVMSG.counter = 0
     username = params[1].split('!',1)[0][1:]
     text = params[3].split(':',1)[1]
     badges = params[0][8:].split(';',1)[0]
@@ -62,6 +82,8 @@ def handle_PRIVMSG(s, *params):
         if cmd in commands:
             commands[cmd](s, *params)
             time.sleep(0.3)
+        else:
+            command_commands(s, *params)
     print "[{}]> {}".format(username, text)
 
 # ----------------------------------------------------------------
