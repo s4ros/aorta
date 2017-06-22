@@ -31,7 +31,7 @@ def command_ruletka(s, *params):
     if number_user == number_gun:
         txt=txt+" JEB! {} umiera w powolnej i okrutnej agonii.".format(username)
     else:
-        txt=txt+" KLIK.. Bębenek był pusty. {} żyje dalej.".format(username)
+        txt=txt+" KLIK.. Bębenek był pusty - {} tym razem miałeś fuksa.".format(username)
     chan_msg(s, txt)
 # ----------------------------------------------------------------
 def command_commands(s, *params):
