@@ -1,3 +1,5 @@
+monitor.sh
+start.sh
 config.ini
 # Byte-compiled / optimized / DLL files
 __pycache__/
