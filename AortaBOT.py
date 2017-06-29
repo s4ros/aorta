@@ -12,7 +12,7 @@ from aorta_threads import ReceiverThread
 # import settings
 import settings
 
-# import handlers and commands
+# import handlers
 from handlers import *
 
 class asocket(object):

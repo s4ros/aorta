@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ----------------------------------------------------------------------------
 # Handlers - serve detected events
 # ----------------------------------------------------------------------------
@@ -6,6 +7,8 @@ import settings
 import random
 import time
 from commands import *
+from bs4 import BeautifulSoup
+import urllib2
 
 # ----------------------------------------------------------------------------
 # static vars decorator
@@ -84,6 +87,16 @@ def handle_PRIVMSG(s, *params):
             time.sleep(0.3)
         else:
             command_commands(s, *params)
+    if 'http://' in text or 'https://' in text:
+        url = text.split(' ', 1)[0]
+        print "===== ULR TO OPEN: {}".format(url)
+        try:
+            soup = BeautifulSoup(urllib2.urlopen(url), "lxml")
+            if soup.title:
+                title = u''.join(soup.title.string[:-1]).encode("utf-8")
+                s.send(u"PRIVMSG #{} :title: {}".format(settings.CHANNEL, title))
+        except:
+            pass
     print "[{}]> {}".format(username, text)
 
 # ----------------------------------------------------------------
