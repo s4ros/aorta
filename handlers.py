@@ -28,7 +28,6 @@ def init_commands(commands):
             commands[key[8:]] = value
             print "New command registered: {} = {}".format(key, value)
 
-
 # ----------------------------------------------------------------
 def handle_376(s, *params):
     """
@@ -93,9 +92,10 @@ def handle_PRIVMSG(s, *params):
         try:
             soup = BeautifulSoup(urllib2.urlopen(url), "lxml")
             if soup.title:
-                title = u''.join(soup.title.string[:-1]).encode("utf-8")
+                title = u''.join(soup.title.string).encode("utf-8")
                 s.send(u"PRIVMSG #{} :title: {}".format(settings.CHANNEL, title))
         except:
+            print "=/=/=/=/=/= ULR {} didn't open. Exception.".format(url)
             pass
     print "[{}]> {}".format(username, text)
 
