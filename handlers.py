@@ -85,7 +85,8 @@ def handle_PRIVMSG(s, *params):
             commands[cmd](s, *params)
             time.sleep(0.3)
         else:
-            command_commands(s, *params)
+            if (handle_PRIVMSG.counter%5) == 0:
+                command_commands(s, *params)
     if 'http://' in text or 'https://' in text:
         url = text.split(' ', 1)[0]
         print "===== ULR TO OPEN: {}".format(url)
