@@ -20,6 +20,9 @@ OWNER = 'your_nick'
 # interval time in seconds
 LOYALTY_INTERVAL = 10
 
+# path to the sqlite3 database file
+DATABASE = 'aorta_www/db.sqlite3'
+
 # ads
 adv_step = 30
 adv_fb = 'https://facebook.com/AortaBOT'

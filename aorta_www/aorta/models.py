@@ -5,16 +5,19 @@ from django.utils import timezone
 
 
 class Chatter(models.Model):
-    nick = models.CharField(max_length=100)
+    nick = models.CharField(max_length=100, unique=True)
     popularity = models.IntegerField(default=0)
     money = models.IntegerField(default=0)
-    last_seen = models.DateField(default=timezone.now)
+    last_seen = models.DateTimeField(default=timezone.now)
     time_spent = models.IntegerField(default=0)
     is_following = models.BooleanField(default=False)
     is_subscribing = models.BooleanField(default=False)
 
+    def __str__(self):
+        return "{}. {}".format(self.id, self.nick)
 
-class Logs(models.Model):
-    nick = models.ForeignKey(Chatter, related_name='chatter')
-    date = models.DateField(default=timezone.now)
+
+class Log(models.Model):
+    nick = models.ForeignKey(Chatter, related_name='logs')
+    date = models.DateTimeField(default=timezone.now)
     text = models.CharField(max_length=350)

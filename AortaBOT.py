@@ -16,6 +16,9 @@ import settings
 # import handlers
 from handlers import *
 
+# import database class
+from database import AortaDatabase
+
 
 class asocket(object):
     def __init__(self, *param):

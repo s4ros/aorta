@@ -1,10 +1,11 @@
 import threading
-import string
 import sys
 import time
 import requests
 import settings
 import json
+
+from database import AortaDatabase
 
 # ----------------------------------------------------------------------------
 
@@ -57,6 +58,8 @@ class LoyaltyPointsThread(threading.Thread):
 
     def add_loyalty_points(self):
         pass
+        # get all users from db
+        # make a list with nicknames only (from db)
 
     def run(self):
         while True:
