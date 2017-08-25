@@ -17,6 +17,9 @@ CHANNEL = 'channel'
 # Channel owner/streamer nickname (probably the same as CHANNEL)
 OWNER = 'your_nick'
 
+# interval time in seconds
+LOYALTY_INTERVAL = 10
+
 # ads
 adv_step = 30
 adv_fb = 'https://facebook.com/AortaBOT'

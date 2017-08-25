@@ -9,7 +9,7 @@ import time
 import string
 import Queue
 
-from aorta_threads import ReceiverThread
+from aorta_threads import ReceiverThread, LoyaltyPointsThread
 
 # import settings
 import settings
@@ -39,6 +39,7 @@ class AortaBOT(object):
         self.handlers = {}
         self.init_handlers()
         self.queue = Queue.Queue()
+        self.chatters_queue = Queue.Queue()
     # ---
 
     def init_handlers(self):
@@ -61,6 +62,10 @@ class AortaBOT(object):
         self.rt = ReceiverThread(self._socket, self.queue)
         self.rt.daemon = True
         self.rt.start()
+
+        self.lpt = LoyaltyPointsThread(self.chatters_queue)
+        self.lpt.daemon = True
+        self.lpt.start()
     # ---
 
     def say_hello(self):
