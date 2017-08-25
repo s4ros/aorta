@@ -6,8 +6,7 @@
 import socket
 import sys
 import time
-import string
-import Queue
+import queue
 
 from aorta_threads import ReceiverThread, LoyaltyPointsThread
 
@@ -27,7 +26,7 @@ class asocket(object):
 
     def send(self, txt):
         time.sleep(0.2)
-        self._socket.sendall(txt + "\r\n")
+        self._socket.sendall(bytes(txt + "\r\n", "utf-8"))
 
 # ----------------------------------------------------------------------------
 
@@ -35,15 +34,14 @@ class asocket(object):
 class AortaBOT(object):
     # ---
     def __init__(self):
-        print(self)
         self.handlers = {}
         self.init_handlers()
-        self.queue = Queue.Queue()
-        self.chatters_queue = Queue.Queue()
+        self.queue = queue.Queue()
+        self.chatters_queue = queue.Queue()
     # ---
 
     def init_handlers(self):
-        for key, value in globals().items():
+        for key, value in list(globals().items()):
             if key.startswith("handle_"):
                 self.handlers[key[7:]] = value
                 print("New handler registered: {} = {}".format(key, value))
@@ -53,6 +51,7 @@ class AortaBOT(object):
         try:
             self._socket = asocket(socket.AF_INET, socket.SOCK_STREAM)
             self._socket.connect((settings.HOST, settings.PORT))
+            print("-- sockets initialized")
         except:
             print("-- socket/connection failed")
             sys.exit(1)
@@ -70,7 +69,7 @@ class AortaBOT(object):
 
     def say_hello(self):
         self._socket.send("PASS {}".format(settings.PASS))
-        self._socket.send("NICK P{}".format(settings.NICK))
+        self._socket.send("NICK {}".format(settings.NICK))
     # ---
     # ---
     # ---
@@ -83,6 +82,8 @@ class AortaBOT(object):
         while True:
             try:
                 msg = self.queue.get(timeout=0.1)
+                action = ""
+                params = ""
                 if msg[0] == ':':
                     who, action, content = msg.split(' ', 2)
                     params = (who, action, content)
@@ -92,15 +93,16 @@ class AortaBOT(object):
                 else:
                     pass
                 print("\n")
-                print(params)
+                # print(params)
                 if action in self.handlers:
-                    self.handlers[action](self._socket, *params)
+                    print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
                     print("-- Handler action required: {}".format(action))
+                    self.handlers[action](self._socket, *params)
                 else:
                     print("-- NO HANDLER found for {}".format(action))
-                    print(msg)
+                    # print(msg)
                     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-            except Queue.Empty:
+            except queue.Empty:
                 pass
 
 

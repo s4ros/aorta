@@ -1,3 +1,6 @@
+*.sql
+*.db
+*.bak
 monitor.sh
 start.sh
 config.ini
