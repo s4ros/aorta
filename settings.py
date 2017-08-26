@@ -19,11 +19,16 @@ OWNER = 'your_nick'
 
 # interval time in seconds
 LOYALTY_INTERVAL = 10
+# how many points will be added when INTERVAL will pass
+LOYALTY_POINTS = 100
+# the uber name of your own Currency
+LOYALTY_CURRENCY = "Hajsy"
 
 # path to the sqlite3 database file
 DATABASE = 'aorta_www/db.sqlite3'
 
 # ads
+adv = True         # True/False - if False, advertising is disabled
 adv_step = 30
 adv_fb = 'https://facebook.com/AortaBOT'
 adv_twitter = 'https://twitter.com/AortaBOT'

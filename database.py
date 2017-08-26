@@ -1,6 +1,6 @@
 import settings
 import sqlite3
-
+import sys
 
 class AortaDatabase(object):
     def __init__(self):
@@ -8,6 +8,20 @@ class AortaDatabase(object):
         self.c = self.conn.cursor()
         self.chatters = []
 
+    def close(self):
+        self.conn.close()
+
+    def parse_db_chatter(self, r):
+        data = {}
+        data['id'] = r[0]
+        data['nick'] = r[1]
+        data['popularity'] = r[2]
+        data['money'] = r[3]
+        data['last_seen'] = r[4]
+        data['time_spent'] = r[5]
+        data['is_following'] = r[6]
+        data['is_subscribing'] = r[7]
+        return data
 #
 # chatters
 #
@@ -16,40 +30,24 @@ class AortaDatabase(object):
         chatters = []
         ret = self.c.execute('SELECT * from aorta_chatter ORDER BY id')
         for r in ret:
-            data = {}
-            data['id'] = r[0]
-            data['nick'] = r[1]
-            data['popularity'] = r[2]
-            data['money'] = r[3]
-            data['last_seen'] = r[4]
-            data['time_spent'] = r[5]
-            data['is_following'] = r[6]
-            data['is_subscribing'] = r[7]
+            data = self.parse_db_chatter(r)
             chatters.append(data)
         return chatters
 
     def get_chatter(self, nick):
-        ret = self.c.execute(
-            """SELECT * FROM aorta_chatter where NICK="{}" """
-            .format('nick'))
-        ret = ret.fetchone()
-        return {
-            'id': ret[0],
-            'nick': ret[1],
-            'popularity': ret[2],
-            'money': ret[3],
-            'last_seen': ret[4],
-            'time_spent': ret[5],
-            'is_following': ret[6],
-            'is_subscribing': ret[7]
-        }
+        query = """SELECT * FROM aorta_chatter WHERE nick='{}'""".format(nick)
+        ret = self.c.execute(query)
+        chatter = self.parse_db_chatter(ret.fetchone())
+        print(":::::: get_online_chatter")
+        print(chatter)
+        return chatter
 
     def add_chatter(self, nick):
         query = """INSERT INTO aorta_chatter
-                             (nick, popularity, 'money', last_seen, \
-                             time_spent, is_following, is_subscribing) \
-                             VALUES ("{}", 0, 0, datetime(), \
-                             0, 0, 0)""".format(nick)
+             (nick, popularity, 'money', last_seen, \
+             time_spent, is_following, is_subscribing) \
+             VALUES ("{}", 0, 0, datetime(), \
+             0, 0, 0)""".format(nick)
         self.c.execute(query)
         self.conn.commit()
 

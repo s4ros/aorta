@@ -40,7 +40,6 @@ class AortaBOT(object):
         self.handlers = {}
         self.init_handlers()
         self.queue = queue.Queue()
-        self.chatters_queue = queue.Queue()
     # ---
 
     def init_handlers(self):
@@ -65,7 +64,7 @@ class AortaBOT(object):
         self.rt.daemon = True
         self.rt.start()
 
-        self.lpt = LoyaltyPointsThread(self.chatters_queue)
+        self.lpt = LoyaltyPointsThread()
         self.lpt.daemon = True
         self.lpt.start()
     # ---

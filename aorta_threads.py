@@ -40,34 +40,52 @@ class ReceiverThread(threading.Thread):
 
 
 class LoyaltyPointsThread(threading.Thread):
-    def __init__(self, queue):
+    def __init__(self):
         threading.Thread.__init__(self)
         self.time_passed = 0
         self.chatters_url = "http://tmi.twitch.tv/group/user/{}/chatters".format(settings.CHANNEL)
-        self.q = queue
+        self.online_nicks = []
 
-    def get_chatters(self):
-        self.q.queue.clear()
+    def get_online_chatters(self):
+        self.online_nicks = []
         r = requests.get(self.chatters_url)
         chatters = json.loads(r.content)
         chatters = chatters['chatters']
         people_cat = ['moderators', 'viewers']
         for pc in people_cat:
             for p in chatters[pc]:
-                self.q.put(p)
+                # print("get_online_chatters - {}".format(p))
+                self.online_nicks.append(p)
 
     def add_loyalty_points(self):
-        pass
+        db = AortaDatabase()
         # get all users from db
-        # make a list with nicknames only (from db)
+        self.database_chatters = db.get_chatters()
+        self.get_online_chatters()
+        db_nicks = []
+        try:
+            for nick in self.database_chatters:
+                db_nicks.append(nick['nick'])
+            # adding new users to db
+            for c in self.online_nicks:
+                if c not in db_nicks:
+                    # print("----------------===========> Added chatter with nick: {} ".format(c))
+                    db.add_chatter(c)
+            # add monet to all online users
+            for nick in self.online_nicks:
+                chatter = db.get_chatter(nick)
+                db.add_money(chatter, settings.LOYALTY_POINTS)
+        except:
+            print("Unfortunately, no users in queue or smth.")
+            pass
+        db.close()
 
     def run(self):
         while True:
             self.time_passed += 1
             if (self.time_passed % settings.LOYALTY_INTERVAL) == 0:
-                self.get_chatters()
-                print(list(self.q.queue))
                 print("{} seconds have passed".format(settings.LOYALTY_INTERVAL))
+                self.add_loyalty_points()
                 print("*" * 25)
             time.sleep(1)
             print("Time elapsed: {}".format(self.time_passed))
