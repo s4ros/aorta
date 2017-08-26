@@ -8,17 +8,54 @@ class AortaDatabase(object):
         self.c = self.conn.cursor()
         self.chatters = []
 
+#
+# chatters
+#
+
     def get_chatters(self):
         chatters = []
         ret = self.c.execute('SELECT * from aorta_chatter ORDER BY id')
         for r in ret:
             data = {}
-            data['nick'] = r[1]
             data['id'] = r[0]
-            data['is_following'] = r[5]
-            data['is_subscribing'] = r[6]
+            data['nick'] = r[1]
+            data['popularity'] = r[2]
+            data['money'] = r[3]
+            data['last_seen'] = r[4]
+            data['time_spent'] = r[5]
+            data['is_following'] = r[6]
+            data['is_subscribing'] = r[7]
             chatters.append(data)
         return chatters
+
+    def get_chatter(self, nick):
+        ret = self.c.execute(
+            """SELECT * FROM aorta_chatter where NICK="{}" """
+            .format('nick'))
+        ret = ret.fetchone()
+        return {
+            'id': ret[0],
+            'nick': ret[1],
+            'popularity': ret[2],
+            'money': ret[3],
+            'last_seen': ret[4],
+            'time_spent': ret[5],
+            'is_following': ret[6],
+            'is_subscribing': ret[7]
+        }
+
+    def add_chatter(self, nick):
+        query = """INSERT INTO aorta_chatter
+                             (nick, popularity, 'money', last_seen, \
+                             time_spent, is_following, is_subscribing) \
+                             VALUES ("{}", 0, 0, datetime(), \
+                             0, 0, 0)""".format(nick)
+        self.c.execute(query)
+        self.conn.commit()
+
+#
+# logs
+#
 
     def get_logs(self):
         logs = []
@@ -27,21 +64,16 @@ class AortaDatabase(object):
             logs.append(r)
         return logs
 
-    def add_chatter(self, nick):
-        query = """INSERT INTO aorta_chatter
-                             (nick, popularity, money, last_seen, \
-                             time_spent, is_following, is_subscribing) \
-                             VALUES ("{}", 0, 0, datetime(), \
-                             0, 0, 0)""".format(nick)
-        self.c.execute(query)
-        self.conn.commit()
-
     def add_log(self, chatter, txt):
         query = """INSERT INTO aorta_log
             (nick_id, date, text) VALUES
             ({}, datetime(), "{}")""".format(int(chatter['id']), txt)
         self.c.execute(query)
         self.conn.commit()
+
+#
+# popularity
+#
 
     def inc_popularity(self, chatter):
         query = """UPDATE aorta_chatter SET popularity=popularity+1 WHERE nick="{}"
@@ -55,6 +87,12 @@ class AortaDatabase(object):
         self.c.execute(query)
         self.conn.commit()
 
+#
+# money
+#
+
+    # def get_money(self, nick):
+
     def add_money(self, chatter, amount):
         query = """UPDATE aorta_chatter SET money=money+{} WHERE nick="{}"
         """.format(amount, chatter['nick'])
@@ -67,6 +105,9 @@ class AortaDatabase(object):
         self.c.execute(query)
         self.conn.commit()
 
+#
+# follows
+#
     def set_follow(self, chatter):
         query = """UPDATE aorta_chatter SET is_following=1 WHERE nick="{}"
         """.format(chatter['nick'])
@@ -79,6 +120,9 @@ class AortaDatabase(object):
         self.c.execute(query)
         self.conn.commit()
 
+#
+# subscribe
+#
     def set_sub(self, chatter):
         query = """UPDATE aorta_chatter SET is_subscribing=1 WHERE nick="{}"
         """.format(chatter['nick'])
@@ -91,6 +135,9 @@ class AortaDatabase(object):
         self.c.execute(query)
         self.conn.commit()
 
+#
+# time
+#
     def update_last_seen(self, chatter):
         query = """UPDATE aorta_chatter SET last_seen=datetime() WHERE nick="{}"
         """.format(chatter['nick'])
