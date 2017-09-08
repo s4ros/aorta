@@ -26,9 +26,9 @@ def command_halt(s, *params):
 # ----------------------------------------------------------------
 
 
-def command_test(s, *params):
-    username = params[0]
-    chan_msg(s, "Hello {}! It's a successful test command execution.".format(username))
+# def command_test(s, *params):
+#     username = params[0]
+#     chan_msg(s, "Hello {}! It's a successful test command execution.".format(username))
 # ----------------------------------------------------------------
 
 
@@ -102,7 +102,7 @@ def command_zbluzgaj(s, *params):
         else:
             chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
     else:
-            chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>".format(username))
+            chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>. Bluzganie kosztuje {} {}".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
     print("-------- bluzgaj -------")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
