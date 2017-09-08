@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# settings.py file for aorta.py bot
+# settings.py file for AortaBOT.py bot
 # those settings probably won't work :)
 
 # Twitch IRC server address
@@ -17,6 +17,13 @@ CHANNEL = 'channel'
 # Channel owner/streamer nickname (probably the same as CHANNEL)
 OWNER = 'your_nick'
 
+# list of privileged users to use commands like !halt, !bonus, etc.
+PRIVILEGED = [
+    'sarosiak',
+    'aortabot',
+    'aorta_bot'
+]
+
 # interval time in seconds
 LOYALTY_INTERVAL = 10
 # how many points will be added when INTERVAL will pass
@@ -26,6 +33,10 @@ LOYALTY_CURRENCY = "Hajsy"
 
 # path to the sqlite3 database file
 DATABASE = 'aorta_www/db.sqlite3'
+
+ruletka_cost = 15
+ruletka_win = 100
+bluzgi_price = 5
 
 # ads
 adv = True         # True/False - if False, advertising is disabled
