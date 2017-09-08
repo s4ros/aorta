@@ -16,7 +16,7 @@ def chan_msg(s, message):
 
 def command_halt(s, *params):
     username = params[0]
-    if username == settings.OWNER:
+    if username in settings.PRIVILEGED:
         chan_msg(s, "Hereby, I'm sentenced to death. Good bye, cruel world!")
         chan_msg(s, "/me going offline.")
         sys.exit(0)
@@ -35,21 +35,24 @@ def command_ruletka(s, *params):
     username = params[0]
     db = AortaDatabase()
     chatter = db.get_chatter(username)
-    number_user = random.randint(1, 6)
-    number_gun = random.randint(1, 6)
-    txt = "{} zakręca bębenek...".format(username)
-    if number_user == number_gun:
-        txt = txt + " JEB! {} umiera w powolnej i okrutnej agonii.".format(username)
-        db.remove_money(chatter, 500)
+    if chatter['money'] >= settings.ruletka_cost:
+        number_user = random.randint(1, 10)
+        number_gun = random.randint(1, 10)
+        txt = "{} is spinning the cylinder...".format(username)
+        if number_user != number_gun:
+            txt = txt + " BANG! {} dies in slow and painful agony. You lost {} {}".format(username, settings.ruletka_cost, settings.LOYALTY_CURRENCY)
+            db.remove_money(chatter, settings.ruletka_cost)
+        else:
+            txt = txt + " *CLICK*.. Lucky you {}. Gun chamber was empty.. this time. You earned {} {}".format(username, settings.ruletka_win, settings.LOYALTY_CURRENCY)
+            db.add_money(chatter, settings.ruletka_win)
     else:
-        txt = txt + " KLIK.. Bębenek był pusty - {} tym razem miałeś fuksa.".format(username)
-        db.remove_money(chatter, 100)
+        txt = "Sorry {}, don't have enough {}. Spinning the cylinder costs {} {}".format(username, settings.LOYALTY_CURRENCY, settings.ruletka_cost, settings.LOYALTY_CURRENCY)
     db.close()
     chan_msg(s, txt)
 # ----------------------------------------------------------------
 
 
-def command_commands(s, *params):
+def command_help(s, *params):
     commands = {}
     for key, value in globals().items():
         if key.startswith("command_"):
@@ -67,7 +70,19 @@ def command_points(s, *params):
     chatter = db.get_chatter(username)
     db.close()
     money = chatter['money']
-    chan_msg(s, "{} użytkownika {}: {}".format(settings.LOYALTY_CURRENCY, username, money))
+    chan_msg(s, "{}, you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
+
+
+def command_bonus(s, *params):
+    username = params[0]
+    target = params[2][0]
+    amount = params[2][1]
+    if username in settings.PRIVILEGED:
+        db = AortaDatabase()
+        chatter = db.get_chatter(target)
+        if chatter:
+            db.add_money(chatter, amount)
+            chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------

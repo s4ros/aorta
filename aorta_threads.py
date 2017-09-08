@@ -4,6 +4,7 @@ import time
 import requests
 import settings
 import json
+import queue
 
 from database import AortaDatabase
 
@@ -16,6 +17,7 @@ class ReceiverThread(threading.Thread):
     """ Thread - receiver, receives Twitch IRC communicates"""
     def __init__(self, sock, queue):
         threading.Thread.__init__(self)
+        self.setName('ReceiverThread')
         self.s = sock
         self.q = queue
         self.buffer = ""
@@ -26,22 +28,24 @@ class ReceiverThread(threading.Thread):
                 # stringdata = data.decode('utf-8')
                 self.buffer = self.buffer + self.s.recv(1024).decode('utf-8')
                 txt = str.split(self.buffer, "\r\n")
-                # print(txt)
+                print(self.name, txt)
                 self.buffer = txt.pop()
-                print(self.buffer)
                 for line in txt:
                     if line == "PING :tmi.twitch.tv":
-                        self.s.sendall("PONG :tmi.twitch.tv\r\n")
-                        continue
-                    self.q.put(line)
+                        print('::PING::PONG::')
+                        self.s.send("PONG :tmi.twitch.tv")
+                    self.q.put(line.lower())
             except:
                 print("xxx ReceiverThread sie wysypal")
-                sys.exit(1)
+                print(sys.exc_info()[0])
+                # sys.exit(1)
+                pass
 
 
 class LoyaltyPointsThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
+        self.setName('LoyaltyPointsThread')
         self.time_passed = 0
         self.chatters_url = "http://tmi.twitch.tv/group/user/{}/chatters".format(settings.CHANNEL)
         self.online_nicks = []
@@ -71,8 +75,10 @@ class LoyaltyPointsThread(threading.Thread):
                 if c not in db_nicks:
                     # print("----------------===========> Added chatter with nick: {} ".format(c))
                     db.add_chatter(c)
-            # add monet to all online users
+            # add money to all online users
             for nick in self.online_nicks:
+                if nick in [settings.NICK, settings.CHANNEL]:
+                    continue
                 chatter = db.get_chatter(nick)
                 db.add_money(chatter, settings.LOYALTY_POINTS)
         except:
@@ -87,5 +93,24 @@ class LoyaltyPointsThread(threading.Thread):
                 print("{} seconds have passed".format(settings.LOYALTY_INTERVAL))
                 self.add_loyalty_points()
                 print("*" * 25)
+                self.time = 0
             time.sleep(1)
-            print("Time elapsed: {}".format(self.time_passed))
+
+
+class AortaDatabaseProcessor(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+        self.setName('AortaDatabaseProcessor')
+        self.queue = queue.Queue()
+
+    def run(self):
+        while True:
+            try:
+                query = self.queue.get(timeout=0.2)
+                if query:
+                    db = AortaDatabase()
+                    db.process_query(query)
+                    db.close()
+                    time.sleep(0.1)
+            except queue.Empty:
+                pass

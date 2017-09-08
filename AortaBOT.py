@@ -59,7 +59,7 @@ class AortaBOT(object):
             sys.exit(1)
     # ---
 
-    def init_recv_thread(self):
+    def init_threads(self):
         self.rt = ReceiverThread(self._socket, self.queue)
         self.rt.daemon = True
         self.rt.start()
@@ -67,6 +67,8 @@ class AortaBOT(object):
         self.lpt = LoyaltyPointsThread()
         self.lpt.daemon = True
         self.lpt.start()
+
+
     # ---
 
     def say_hello(self):
@@ -79,11 +81,11 @@ class AortaBOT(object):
     def run(self):
         print("Running")
         self.init_socket()
-        self.init_recv_thread()
+        self.init_threads()
         self.say_hello()
         while True:
             try:
-                msg = self.queue.get(timeout=0.1)
+                msg = self.queue.get()
                 action = ""
                 params = ""
                 if msg[0] == ':':

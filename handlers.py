@@ -48,7 +48,7 @@ def handle_376(s, *params):
 # ----------------------------------------------------------------
 
 
-def handle_CAP(s, *params):
+def handle_cap(s, *params):
     """
     CAP ACK events are sent in response to CAP REQ.
     """
@@ -57,53 +57,47 @@ def handle_CAP(s, *params):
 # ----------------------------------------------------------------
 
 
-def handle_PING(s, *params):
-    """
-    Repond with PONG instruction when PINGed
-    """
-    s.send("PONG :tmi.twitch.tv")
-    print(":twitch:PING:PONG:")
-
 # ----------------------------------------------------------------
 
 
-def handle_JOIN(s, *params):
+def handle_join(s, *params):
     username = params[0][1:].split('!')[0]
     if username.lower() == settings.NICK:
         print("-----------> Welcome message sent.")
-        s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
+        # s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
 
 # ----------------------------------------------------------------
 
 
-def handle_PART(s, *params):
+def handle_part(s, *params):
     pass
 
 # ----------------------------------------------------------------
 
 
 @static_vars(counter=0)
-def handle_PRIVMSG(s, *params):
+def handle_privmsg(s, *params):
     if settings.adv:
-        handle_PRIVMSG.counter += 1
-        if handle_PRIVMSG.counter >= settings.adv_step:
+        handle_privmsg.counter += 1
+        if handle_privmsg.counter >= settings.adv_step:
             num = random.randint(0, len(settings.adverts) - 1)
             print("\n::::: NUM ::::: {} ::::::".format(num))
             s.send("PRIVMSG #{} :{}".format(settings.CHANNEL, settings.adverts[num]))
-            handle_PRIVMSG.counter = 0
+            handle_privmsg.counter = 0
     username = params[1].split('!', 1)[0][1:]
     text = params[3].split(':', 1)[1]
     badges = params[0][8:].split(';', 1)[0]
     if text[0] == '!':
         cmd = text.split(' ', 1)[0]
         cmd = cmd[1:]
-        params = (username, cmd)
+        others = text.split(' ', 2)[1:]
+        params = (username, cmd, others)
         if cmd in commands:
             commands[cmd](s, *params)
             time.sleep(0.3)
         else:
-            if (handle_PRIVMSG.counter % 5) == 0:
-                command_commands(s, *params)
+            if (handle_privmsg.counter % 5) == 0:
+                command_help(s, *params)
     if 'http://' in text or 'https://' in text:
         url = text.split(' ', 1)[0]
         print("===== ULR TO OPEN: {}".format(url))
@@ -121,7 +115,7 @@ def handle_PRIVMSG(s, *params):
 # ----------------------------------------------------------------
 
 
-def handle_USERNOTICE(s, *params):
+def handle_usernotice(s, *params):
     """
     @badges=subscriber/0,premium/1;color=#19B34A;display-name=Nimanski;emotes=;id=5b3968b0-19c5-46cf-bf1a-28eff7c83d41;login=nimanski;mod=0;msg-id=resub;msg-param-months=2;msg-param-sub-plan-name=Dr\sDisRespect;msg-param-sub-plan=Prime;room-id=17337557;subscriber=1;system-msg=Nimanski\sjust\ssubscribed\swith\sTwitch\sPrime.\sNimanski\ssubscribed\sfor\s2\smonths\sin\sa\srow!;tmi-sent-ts=1498078543927;turbo=0;user-id=69832970;user-type= :tmi.twitch.tv USERNOTICE #drdisrespectlive :Go Doc, keep dominating these blonde banged snot nosed punks! yeahyeahyeahyeahyeahyeahyeahyeahyeahyeahyeahyeah.. RAAAUULLLLLLLLLL!
 """

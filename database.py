@@ -2,6 +2,7 @@ import settings
 import sqlite3
 import sys
 
+
 class AortaDatabase(object):
     def __init__(self):
         self.conn = sqlite3.connect(settings.DATABASE)
@@ -22,6 +23,10 @@ class AortaDatabase(object):
         data['is_following'] = r[6]
         data['is_subscribing'] = r[7]
         return data
+
+    def process_query(self, query):
+        print(self.__name__, ':: processing database QUERY: {}'.format(query))
+        return self.c.execute(query)
 #
 # chatters
 #
@@ -36,8 +41,11 @@ class AortaDatabase(object):
 
     def get_chatter(self, nick):
         query = """SELECT * FROM aorta_chatter WHERE nick='{}'""".format(nick)
-        ret = self.c.execute(query)
-        chatter = self.parse_db_chatter(ret.fetchone())
+        try:
+            ret = self.c.execute(query)
+            chatter = self.parse_db_chatter(ret.fetchone())
+        except:
+            chatter = None
         print(":::::: get_online_chatter")
         print(chatter)
         return chatter
