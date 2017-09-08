@@ -1,0 +1,2564 @@
+[
+  {
+    "sentence": "Masz łeb jak sklep, tylko półki puste!",
+    "category": ["soft", "intelligent", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Twoja stara jest jak wózek w supermarkecie - wrzucasz 2 złote i pchasz ile chcesz.",
+    "category": ["stupid", "soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Twoja twarz wygląda jakby Cię w dzieciństwie z procy karmili.",
+    "category": ["stupid", "soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zamknij gębę, bo muchy się zlatują.",
+    "category": ["stupid", "soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " pozdrów ojca i gołębie.",
+    "category": ["stupid", "soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak byłeś mały, to matka nosiła Cię w siatce na psie odchody i napierdalała po krawężnikach - dlatego teraz taki trochę ignorant jesteś.",
+    "category": ["vulgar", "intelligent", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jak byłaś mała, to matka nosiła Cię w siatce na psie odchody i napierdalała po krawężnikach - dlatego teraz taka trochę ignorantka jesteś.",
+    "category": ["vulgar", "intelligent", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " synu Peta i Pojary.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " córko Peta i Pojary.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Zamknij się synu kręconej baby z nosa.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zamknij się córko kręconej baby z nosa.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Nie dłub w nosie bo Cię górnik opierdoli.",
+    "category": ["soft", "stupid", "suchar", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " kiedy miałeś ten wypadek? Bo nie wierzę, że masz taką twarz od urodzenia ;-)",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " kiedy miałaś ten wypadek? Bo nie wierzę, że masz taką twarz od urodzenia ;-)",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Kąsasz schemat?",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Kąsacie schemat?",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["group"]
+  },
+  {
+    "sentence": "Ssij mi zwieracz zmutowany mastodoncie, walony przez jednonogą peruwiańską dziwke.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["xxx"]
+  },
+  {
+    "sentence": " Ty koński zwisie źrebaka.",
+    "category": ["vulgar", "soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " spierdolino matki Czesia.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Róże są czerwone, fiołki fioletowe, Frankenstain jest paskudny, ale co do cholery stalo sie Tobie !?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " umyj zęby bo sanepid sie dopierdoli :/.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Mów proszę do dupy bo moje uszy są na urlopie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Widziałem Twoich rodziców. Fajni panowie.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja matka była przy porodzie?!",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " gdy na Ciebie patrzę to jestem za aborcją.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Badania genetyczne wykazały, że kiedy kobieta i mężczyzna podczas stosunku się śmieją - to urodzi się ładne i mądre dziecko. Szkoda że Twoi rodzice tego nie wiedzieli...",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja dupa jest tak rozepchana że zmieściliby tam szklanego tulipana!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zrobię Ci z dupy Jesień średniowiecza, Ty owsinogi niedopałku krematoryjny!",
+    "category": ["vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Ty wale spuszczony przez magiczne bobry i wyłomotany przez hinduskiego szamana.",
+    "category": ["vulgar", "soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak byłeś mały, to byłeś tak brzydkim dzieckiem, że Cię psy w piaskownicy piaskiem zasypywały.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jak byłaś mała, to byłaś tak brzydkim dzieckiem, że Cię psy w piaskownicy piaskiem zasypywały.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wiesz jak Cię spłodzono ? Twój stary spuścił się na buta i kopał Twoją starą po piździe.",
+    "category": ["vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja matka klaszcze u Rubika.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara pije wode z grzejnika.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wiesz, ostatnio widziałem Cię w sklepie rowerowym na półcę z pedałami.",
+    "category": ["soft", "stupid", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wiesz dlaczego jesteś taki brzydki? Bo jak byłeś mały, to Ci się kołyska zapaliła i stary gasił Cię łopatą.",
+    "category": ["soft", "stupid", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wiesz dlaczego jesteś taka brzydka? Bo jak byłeś mała, to Ci się kołyska zapaliła i stary gasił Cię łopatą.",
+    "category": ["soft", "stupid", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Twoja stara pierze w rzece.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja siostra kreci kołem fortuny.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twój stary złamał sobie kutasa jak ruchał twoją starą, a Ty jesteś bazarowym chujopijcą.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twój stary złamał sobie kutasa jak ruchał twoją starą, a Ty jesteś bazarową spermo-pijczynią.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Pies Cię trącał, a Twoja stara rodziła Cię w kojcu porodowym dla świń.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś wymerdanym przez psy z osiedla sromowałem.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wydupiaj ruchać się z pawianem.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zamiast matczynej miłości w dzieciństwie, doznałeś ojcowskiej miłości z penetracją dupy Ty obrośnięty łopaciarzu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty komunistyczny, zarzygany przez stolca rumuńskiego żula betonie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz nos jak ogórek kiszony, jesteś jebakiem leśnym, a Twoja mama to całkiem przystojna mężczyzna.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś spuszczonym przez każdego chętnego penera, indoktrynowym śmieciarzem co tańczy z eunuchami.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś chujowy fchuj.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoi starzy zrobili Cię na raty cwelu pomidorowy.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Idioto masz ryja jak grzybiarz ty spłodzony w miejscu publicznym, gdzie psy chujami wodę pompują, walcu drogowy z Mozambiku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoje dupsko stanie sie moim trofeum myśliwskim!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wąchaj pałe kałożerny stolcu Stalina.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zrobie Ci z jaj druty telegraficzne, Ty zryty wypierdku mamuta.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " wyglądasz jakby Cię cyganka w biegu wysrała Ty stary ośle!",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " wyglądasz jakby Cię cyganka w biegu wysrała Ty stara proco!",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Czochraj bobra i ciąg drąg rozepchany kurwiczepku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zrobię Ci z ryja parking dla ciężarówek ty trędowaty, brudny rzepie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Skrob kabla i przetrzyj chuja ścierą do mycia spalin eustachiasza ciulaty mastodoncie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz w dupie bank spermy Ty skutasiony ciulu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz w dupie bank spermy Ty skutasiona cipo.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " ty zropiały cebularzu, masz popierdolone w deklu przerżnięty spermosiorbaczu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " ty zropiała cebularo, masz popierdolone w deklu przerżnięta spermosiorbaczko.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Jesteś pojebanym debilem, chrumkaj trznadla zamarznięty tamponie na patyku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Azbestowy skwarze na cycku rumuńskiej suki, zerżnięty w dupe przez papużki nierozłączki.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś wsadzał sobie palce w dupsko Ty sfilcowany, kwadratowy hujogłowcu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś wsadzała sobie palce w dupsko Ty sfilcowana, kwadratowa cipo.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś wsadzał sobie palec w dupsko Ty zapyziały strusi klopsie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś skurwysyńskim, psim odbytem.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś skurwiałą, psią kupą.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz rozjebaną dupę na wszystkie cztery strony świata.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz rozjebaną dupę na wszystkie cztery strony świata, masz klapczącą pizdolinę.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Chapaj dzidę i bierz do pyska póki tryska wygrzmocony świniopasie!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz dupę zamiast głowy.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś zapiździałym cebulakiem, kąsaj ogóra matkojebco!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jak Hugo w Dolinie Paproci",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Spadaj na drzewo prostować banany!",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Spadaj na drzewo liście pompować!",
+    "category": ["stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Kim Ty  będziesz w przyszłości?! Chyba owocem w Jogobelli",
+    "category": ["stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Biedny ten Twój mózg ",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak Cię walnę w ten poniemiecki łeb, to Ci się okupacja przypomni.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Milcz jak do mnie mówisz! ",
+    "category": ["soft", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wiesz, jak utrzymać idiotę w niepewności? … Powiem Ci później.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wiesz, jak utrzymać idiotkę w niepewności? … Powiem Ci później.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Stworzył mnie Bóg, bo lubi piękno, Ciebie, bo ma poczucie humoru.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Nie podskakuj, bo nabijesz sobie guza o sufit.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Słyszałem, że jak byłeś mały to Cię dotykali patykami, bo nie wiedzieli co to jest.",
+    "category": ["soft"],
+    "sender": ["man"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Słyszałem, że jak byłaś mała to Cię dotykali patykami, bo nie wiedzieli co to jest.",
+    "category": ["soft"],
+    "sender": ["man"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Słyszałam, że jak byłaś mała to Cię dotykali patykami, bo nie wiedzieli co to jest.",
+    "category": ["soft"],
+    "sender": ["woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Słyszałam, że jak byłeś mały to Cię dotykali patykami, bo nie wiedzieli co to jest.",
+    "category": ["soft"],
+    "sender": ["woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Lubię kolor złoty, ale Twoje zęby  to już przesada.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Daj mi swoje zdjęcie, bo chcę sobie zrobić kanapkę z pasztetem.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Kochaj deszcz, tylko on na Ciebie leci.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Rozbiegnij się i w ściane jebnij ;-).",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Matka Cię pod latanią poczeła . Dlatego nie masz mózgu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdy Cię widzę  szukam zasłony dymnej.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoi rodzice muszą mieć duże pole... Skoro wyhodowali takiego buraka jak Ty .",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz ryj jak sprzęgło od żuka.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara wędzi maslo.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara wie gdzie jest nemo.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Daj mi swoje zdjęcie, bo zbieram pokemony.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak patrze na Ciebie, to nie wiem czy zostałeś poczęty w Hiroszimie czy w Czarnobylu.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Smyraj larwę.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gryź koper.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz kopalnie złota w gębie .",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Woźny nie posprzątał wszystkiego!",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja matka zasługiwała na lepsze .",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara bije Cię kablem bezprzewodowym .",
+    "category": ["stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gównem ci się odbija .",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Podobno jak przechodziłeś obok siłowni to zakwasów dostałeś?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz twarz  jak Pinokio po inwazji Termitów.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Mam taki interes ... wyliż mi grzyba.",
+    "category": ["vulgar"],
+    "sender": ["man"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wyżej srasz niż dupę masz .",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Połknij język i powiedz jakie to uczucie.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz mordę jak dzik torbę.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wali Ci z pyska, jak z dupy tygryska.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara zapierdala.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ty spaczony, nieudany falsyfikacie homo sapiens - wybywaj ze swoją pustą łepetyną na Kamczatkę.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Nic dziwnego, że brak Ci części mózgu jeśli przez pierwsze miesiące wisiałeś w kondomie za oknem.",
+    "category": ["soft", "vulgar", "intelligent", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś na poziomie intelektualnym telewizji śniadaniowej!",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wszystko z Tobą  ok? Wyglądasz jakby Cię za dzieciństwa w betoniarce kołysano.",
+    "category": ["soft", "vulgar", "intelligent", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Niektórym Bóg dał rozum, innym urodę. Tobie  poskąpił jednego i drugiego.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdyby z głupoty można było produkować prąd, to zasiliłbyś nie jedno miasto, wiesz?",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Gdyby z głupoty można było produkować prąd, to zasiliłabyś nie jedno miasto, wiesz?",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Twoja uroda  razi moje poczucie estetyki.",
+    "category": ["soft", "vulgar", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz szczęście, że oddychanie to odruch bezwarunkowy, sam byś go nie opanował.",
+    "category": ["soft", "vulgar", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś chodzącym dowodem na to, że ewolucja może przebiegać wstecz.",
+    "category": ["soft", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jeśli w reinkarnacji ma znaczenie inteligencja, to będziesz papierem toaletowym.",
+    "category": ["soft", "vulgar", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Nasza dalsza konwersacja nie ma najmniejszego sensu merytorycznego, albowiem egzystujesz w zbyt płytkim brodziku intelektualnym, a Twoja elokwencja, nie jest adekwatna do mojej erudycji - co koliduje z moimi imperatywami.",
+    "category": ["soft", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ty senarze jambiczny! Zwersyfikuj sobie średniówkę, bo Ci się metrum rozpada, amfimakrze niedorobiony!",
+    "category": ["soft", "vulgar", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Weź swoje widełki replikacyjne i idź się bawić do innej duplikacji!",
+    "category": ["soft", "stupid", "intelligent", "nice"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdyby głupota umiała latać - latałbyś 10 km nad ziemią .",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Gdyby głupota umiała latać - latałabyś 10 km nad ziemią .",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Gdyby wsadzić Twój mózg do łebka od szpilki - to byłaby grzechotka.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś tak głupi, czy na prawdę oszukałeś przeznaczenie ?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś tak głupi, czy na prawdę oszukałaś przeznaczenie ?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Lepiej idź na łąkę komary doić.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak się nauczysz klaskać czołem to pogadamy.",
+    "category": ["stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Mózg na gówno zamieniłeś?",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Mózg na gówno zamieniłaś?",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Jak mówisz do mnie to zęby na baczność a nie co drugi wystąp!",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ty podjednostko aspołeczna.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Ty władco kurzu tzw. tumanie!",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak patrzę na Ciebie  to tracę wiarę w ludzką inteligencję.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ja na ogół unikam takich konfrontacji, ale wiadomo, że czasem sytuacja tego wymaga.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Uważam że poprostu jesteś nieszkodliwym idiotą, ale nie każdy ma o tobie tak dobre zdanie jak ja.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ogol pięty!",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "matka Ci jajowody na kokardke zawiązała.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jak kwit na węgiel.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Coś ci się zassało w mózgu.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Urwałeś się z choinki wielkanocnej?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Urwałaś się z choinki wielkanocnej?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Brzęczysz jak stary tramwaj.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wszystko w porządku porozrzucane?",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Nie słupa to wina, ze ślepy go nie widzi.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś dowcipny jak taczka gnoju.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś błyskotliwy jak salceson ",
+    "category": ["soft"],
+    "sender": ["woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Bywają przypadki, ze są dzieci bez matki.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jak siódme dziecko baby jagi.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Będą z Ciebie ludzie, jak Cię mrówki z cukrem zjedzą.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz czoło jak skocznia narciarska.",
+    "category": ["soft", "vulgar", "intelligent", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdyby za powierzchnie mózgu pobierali podatek, to byś dostał rabat!",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Gdyby za powierzchnie mózgu pobierali podatek, to byś dostała rabat!",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Masz gębę jak pęknięta deska klozetowa.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś szybki jak rakieta radzieckiej konstrukcji.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Nie przychodź do mnie do domu bo mi pies ucieknie.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Daj mi swoje zdjęcie, bo mi krowa nie chce zdechnąć.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz nawalone jak cyganka w tobołku.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz gębę jak tłuczek do ziemniaków.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś rozwinięty jak papier toaletowy.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś rozwinięta jak papier toaletowy.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wyrobiłeś się jak gumka w gaciach.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyrobiłaś się jak gumka w gaciach.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Masz łeb z tego materiału co kangur torbę!",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz oczy jak wejście AUDIO-VIDEO.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyrobiłeś się jak majtki w kroku.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyrobiłaś się jak majtki w kroku.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Jestem onieśmielony Twoim głupim wyrazem twarzy .",
+    "category": ["soft"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jestem onieśmielona Twoim głupim wyrazem twarzy .",
+    "category": ["soft"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś genialny jak szczur doświadczalny.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś czarująca jak futro z zaskrońca.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Jesteś ciemny jak dwunasta w nocy!",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś czuła jak klisza fotograficzna",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Gdybym miął gębę jak Ty, to bym codziennie chodził pod parasolem.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdybym miąła gębę jak Ty, to bym codziennie chodził pod parasolem.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz cycki jak ser Tylżycki.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Zamknij gębę, bo muchy się zlatują.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara nie ma dzieci.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara nurkuje w studni.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ale z ciebie  cipka niewydymka.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Masz ryj jakby Cię łopatą gasili.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ty koci zwisie w gumofilcu.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty odtylcowy wujkojebco",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty kawale chama w odcieniach Yellow Bahama.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoja Stara zamiata pustynie.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Czy istniejesz również w wersji z mózgiem?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Twoje zęby są jak gwiazdy na niebie - żółte i daleko od siebie.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Miałem zostać Twoim ojcem, ale mnie kundel wyprzedził.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Byłeś w Laponii? Dlaczego Ci mózg zamarzł?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Byłaś w Laponii? Dlaczego Ci mózg zamarzł?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Twoja stara jest taka gruba, że zjdęcie do paszportu robili jej satelitą.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara to twój stary.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twój stary to teletubiś.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz  jakby Cię cyrklem strugali.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " masz mordę jak chodnik.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Nie przeżywaj bo gaci nie dopierzesz!",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wkładasz nogi do wody i mówisz że to grzybowa.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twój stary jest saperem? Bo masz morde jak niewypał.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara przewija pasek w TVN24.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja metryka urodzin jest listem z przeprosinami do producenta kondomów.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " masz morde jak akumulator, tylko ładować.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Ty kurwo bez szkoły!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Masz ryj jak spłuczka klozetowa tylko zpuścić w nim gówno.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Przeczochrany rodzynie z dupy, masz ryj jak trolejbus.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś gównogębnym chujem, połknij gluta próchnico!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Mlaskaj pytonga i czep sie tramwaju zafajdany stolcu rumuńskiego żula Alberta.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz pryszcza między uszami ty przydupasie.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zrobię Ci  z dupska chińską czapę, Ty pedofilski stolcu Hitlera.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz wrzody na chuju, wysadzony w dupe gównożerco.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś spierdolił z wiadra podczas skrobanki, Ty molestowany wieprzu.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś spierdoliła z wiadra podczas skrobanki, Ty molestowana świnio.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś codziennie żarł parujące kloce, Ty capiący psi napletku.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Męcz tatara zakurwiały jak kurwa worku po nawozach.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Stary gdzie taka żyzna gleba jest, że takie dorodne buraki rosną?!",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Pełzaj flaka i pchaj wibrator zachujały szmaciarzu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś zgrzybiałym lumpem, pieprz gówno przez rure ryju.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty pojebańcu z Wólki Tatrzańskiej",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś pojebany jak lato z radiem.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś pojebana jak lato z radiem.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Jebany przez stado goryli czereśniaku, skrzyżuj nogi bo Ci z grzyba bucha stolcolubny rodzynie bengalskiej świni!",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz zgrzybiałego fiuta Ty srakojebny zjebie genetyczny.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twarzowe zapłaciłeś, że z taką mordą popierdalasz?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twarzowe zapłaciłaś, że z taką mordą popierdalasz?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Zrobię Ci z mordy origami Ty azbestowy łamago.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Kulaj smara zryty chujcu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zrobie Ci z dupy szafke na buty, Ty pedalski wielbłądzi naplecie utarzany w piasku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty wykastrowany koguci prąciu, pizgany w oko przez stolca rumuńskiego żula.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zrobie Ci z dupy chińską porcelane Ty trabanci tłoku.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś zwykła pała, wyglądasz mi na pedała.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Stara Cię w betoniarce kołysała.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś zakutasionym capem ze spuchniętymi jajami, powyrywaj sobie włosy z dupy włosie łonowy orangutana.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz zęby jak płot po wiejskiej zabawie ty pomiocie chińskiego taksówkarza!",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Widzialem Twoją starą na balkonie, jak sobie goliła dupe trójwidłową, samobieżną kosiarką do betonu.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś językiem czyścił chodniki z psich gówien.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś językiem czyściła chodniki z psich gówien.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Ty kurewski zoofilu, masz zgrzybiałego fiuta toporem jebany lachociagu pawiana na wielbłądzim garbie.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zrobie Ci tornado na twarzy Ty toporem jebany liszaju.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zapierdala Ci z ryja jak cyganowi z rozpora.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Pełzaj flaka i pchaj wibrator zachujały szmaciarzu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " Ty łysy wytrysku kojota.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Stolcolubny kutafonie, walony w kakę przez sparaliżowaną, azerbejdżańską kurwe.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś jebanym w dupę kocmołuchem z Tasmanii, wyruchanym przez jeżozwierza.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " czemu liżesz jajka swojego przyjaciela? Przecież mówiłeś, że lubisz jak Cię gwałci nogą i robi drenaż odbytu środkami spożywczymi.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " z ryja Ci kapie sperma żula.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " podobno lubisz lizać bezdomnych pod pachami i po podjajczu, zwłaszcza takich nieumytych kocmołuchów, którzy koczują na centralnym.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " widziano Cię jak tasujesz się w ZOO patrząc na goryla i jednocześnie szamiesz banana.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " masz w dupie stolec kolegi. Po ostatniej imprezie wymieniliście się między sobą gówienkiem. Jak Ci się je nosi?",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś chory na spermatogenezę i wycieka Ci sperma z dupska.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " jesteś chora na spermatogenezę i wycieka Ci sperma z dupska.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " moczysz się w nocy kiedy gwałci Cię tata w związku, zalecam Ci wizytę u lekarza odbytnika.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " masz ochlapnięte uszy od trzaskania minet starym babom.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Są słuchy, że Twoja stara kisi w dupie nielegalne ogóry.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Siedziałem sobie ostatnio przebrany za księdza i jak mi sie przyszła spowiadać Twoja stara,  wiesz, że ona Ci w dupie grzebie jak spisz, a potem Ci palcem rysuje na plecach pentagramy?",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Starzy wydłubali Cie z kinder niespodzianki.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "W sumie nie ma co dymać psa w chorą dupę.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jak skrzyżowanie wagonu z węglem z funkcjonariuszem Chińskiej Armii Ludowej.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " śmierdzi Ci z usta bąkiem starej baby.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " słyszałem, że lubisz spijać ropę z pękających na dupie ropni.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " rośnie Ci huba na dupie i mech na stopie. Liż kalosz.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " jak to się dzieje, że szamiesz rzygi i sam nie rzygasz?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " chłeptaj piździsko psie zapinany w ucho, kmiocie odbytniczy.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " Twoja dupa robi za stację dokującą dla murzyńskich kutasów.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " słyszałem, że zarabiasz dając dupy małpom z ZOO?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " słyszałam, że zarabiasz dając dupy małpom z ZOO?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Twoje ulubione jedzenie to kał z dodatkiem spermy, łoniaków i kóz z nosa.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " wyglądasz jak zrolowana koza z nosa.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " czemu lubisz pić mocz króliczy i wąchać bąki krowie?",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " podobno w przedszkolu byłeś bity głową o pisuar i zjebał Ci się baniak.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " podobno w przedszkolu byłaś bita głową o pisuar i zjebał Ci się baniak.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " jesteś wynikiem kaziroctwa.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Ty debilu skończony mówiłem Ci, że kału się nie szamie, teraz jebie Ci z ryja jak z TOI TOI'A!",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " słyszałem również, że lubisz trzymać własne palce w swojej dupie oglądając telewizję?",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " weź się odśwież bo jebiesz jak odchody wielkiej dupy leżące na słońcu.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " ruchałeś się z własnym kuzynem i zostałeś zalany po pachy jebany stworze.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " ruchałaś się z własnym kuzynem i zostałaś zalana po pachy jebana łajzo.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " Ty gruby, jebany skurwysynu z plamą ze spermy na poliku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " Ty gruba, jebana rusałko z plamą ze spermy na poliku.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " słyszałem, że lubisz jak Ci wsadzają jądra do buzi.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " wyleciałeś z kleksem swojej starej podczas sranka zafajdany debilu.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " wyleciałaś z kleksem swojej starej podczas sranka zafajdany stonko.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " słoiku zajebany, co wpierdala pączki ze Społem.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " jesteś szambonurkiem pracującym za złotówkę, który jest gwałcony w TOI TOI'u.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " w Twoim ryju można puszczać statki tyle masz tam spermy końskiej.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " zapyziały koczkodanie, czemu w oczodołach zamiast gałek ocznych masz jądra?",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " słyszałem, że lubisz jak Cię walą w zad jednocześnie waląc konia.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " słyszałam, że lubisz jak Cię walą w zad jednocześnie waląc konia.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " jesteś ssaczostolcem lubiącym napar z odchodów woźnego ze szkoły podstawowej.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " masz nos rozjebany od kutasów i wyglądasz jak Eskimos.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " słyszałem, że na kolację opierdalasz śmieci segregowane z wywarem z siura żula.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " słyszałam, że na kolację opierdalasz śmieci segregowane z wywarem z siura żula.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Biorąc pod uwagę wszystkie czynniki wpływające na Twój wygląd, muszę rzec, iż wyglądasz jak niegodziwa, drylowana w anusa obstrukcja.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś spierdolił z wiadra podczas skrobanki Ty przerżnięty walcu drogowy z Ukrainy.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś spierdoliła z wiadra podczas skrobanki Ty przerżnięta suko drogowa z Ukrainy.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Szczerze mówiąc, jestem zmuszony stwierdzić, iż wyglądasz mi na nielubianego przez księdza Jankowskiego, niecnego koprofila z peweksu.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Szczerze mówiąc, jestem zmuszona stwierdzić, iż wyglądasz mi na nielubianego przez księdza Jankowskiego, niecnego koprofila z peweksu.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Szczerze mówiąc, jestem zmuszona stwierdzić, iż wyglądasz mi na nielubianą przez księdza Jankowskiego, niecnego koprofila z peweksu.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Szczerze mówiąc, jestem zmuszony stwierdzić, iż wyglądasz mi na nielubianą przez księdza Jankowskiego, niecnego koprofila z peweksu.",
+    "category": ["soft", "vulgar", "intelligent"],
+    "sender": ["man"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " wyglądasz jak wydrylowany przez mongolskich uchodźców, niewdzięczny jurny wał.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś majestatycznym, niewymrożonym w katalońskim kanale naleśnikiem.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "... na dodatek jesteś despiralizowanym przez hordę genetycznie zmutowanych murzynów pyrem co robi kupę na dworze, a Twój stary to strusi klops.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Generalizując, konstatuję, iż wyglądasz mi na mielonego przez kosiarkę spalinową, stolcolubnego ipsacjonistę.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz dupsko jak słonicy po zalotach słonia Ty paszczurze.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Pedofilski kapciu, masz morde jak tatarskie siodło.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Tarzaj banana zapiździały zmazie nocny nietoperza.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Ci stary codziennie kutasem kakao w dupie mieszał.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " Ty zryty stulejarzu, wypatroszony przez stado spoconych murzynów i stado goryli chorych na raka macicy.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś zwykłym spermosiorbarczem, przyjmij pozycję zbierania ryżu capie ze spuchniętymi jajcami.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zrobię Ci z ryja składowisko odpadów toksycznych, Ty owsinogi mapecie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Miękkim chujem jesteś robiony okurwieńcu pierdolony.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jak pomidor z wrodzoną wadą mózgu Ty azbestowy fiucie z rozjebanej chaty szmaciarza z Uzbekistanu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jak pomidor z wrodzoną wadą mózgu Ty azbestowa cipo z rozjebanej chaty szmaciarza z Uzbekistanu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Twoja stara podczas ciąży miała kurwicę macicy, Ty sfilcowany wypierdku mamuta z faludży.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Twój stary spuścil się na gnój i słonce Cie wychodowało, Ty zafajdany wielbłądzi naplecie utarzany w piasku.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś z pizdy na nartach wyjechał, wykastrowany rodzynie bengalskiej świni!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz grzywkę jak Hanka Bielicka pod pachami.",
+    "category": ["soft", "vulgar", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Co sie tak szczerzysz jak szczerbaty na suchary?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Co sie tak szczerzysz jak szczerbata na suchary?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " Ty przerżnięty bułgarski wymiocie z muszli klozetowej.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twój stary był piekarzem, dlatego masz ryj jak rozjebany naleśnik.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jak kwazimodo po trepanacji czaszki, Ty stolcu rumuńskiego żula!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty pampersie używany przez stado knurów na zmianę.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Co ci się stało? ...a sorry Ty  tak wyglądasz.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz ryj jak boisko do krykieta, Ty toporem jebany rurociągu z Mongolii!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz ryj jak boisko do krykieta, Ty toporem jebana spermopijczynio z Mongolii!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Wysadzony w dupe kurwiczepku, walony w kakao przez ojca Rydzyka.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wysadzona w dupe kurwiczepku, walona w kakao przez ojca Rydzyka.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Zajebie Ci w ten kurwa głupi ryj, aż się porzygasz komunijnym bigosem.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " masz ryj jak dupsko orangutana, Ty niedopałku krematoryjny.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś zjadł stęchłe łożyska brudnych cyganek, Ty ryju z dworca w Zazibarze!",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakbyś zjadła stęchłe czopy brudnych cyganów, Ty lumpiaro z dworca w Zazibarze!",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Masz na głowie gówno krowie Ty spruchniały włosie z przepoconej dupy.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " zrobie Ci z głowy spust na fekalia, Ty toporem jebany wymiocie czeczeńskiego partyzanta z kreciej nory!",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoja stara to pancerna rebeka.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś zakutasionym liszajem, śsij druta mudżachedinie.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zaraz Twoje  genitalia zmienią sie w bezkształtną masę krwi i kości.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz kurewsko niewyjściowy ryj.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakby robili Cię przez telefon i zabrakło impulsów.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Ci ojciec zaorał ryj kutasem Ty spruchniały szczochu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Ci ojciec zaorał ryj kutasem Ty spruchniała szczyno.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": " Ty zmutowany odprysku nocnika, wąchaj krecika cienki jak zupa więzienna mutancie z Ukrainy.",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jakby Twoja matka wiedziała co urodzi, to by sobie sama skrobane zrobiła łyżką stołową.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyjebany łamago, jebany w odbyt przez bażanty z Mongolii.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Mój Tata chce żebyś nas odwiedził, bo naprawia rower i nie wie jak wygląda pedał.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " ile trzeba było Twojej starej śniegu w pizde napchać żeby ulepić takiego bałwana?",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Cała Polska jebie Twoją starą.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz pytę jak niemowle ty skurwysynu.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Zafajdany koguci prąciu, masz morde jak radziecki poligon zezowaty pierdolcu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Gryź batona scyborgizowany zjebie genetyczny.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Kąp się w kale jebany pedale, cofnięty w rozwoju dropsie, wyruchany przez syna grabarza.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wiesz czemu Twoja stara nie jeździ na rowerze? bo jej dzyndzel w łancuch wchodzi i budzi całe osiedle.",
+    "category": ["vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jak byłeś mały to na gówno mówiłeś papu.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Targaj dzbana i ślizgaj mikołaja wygrzmocony bagiecie z czarnobyla.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Generalnie rzecz biorąc to ostentacyjnie pierdzę w Twoim kierunku.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": " masz rozjechaną autostrade zamiast dupy, Ty jebany przez stado goryli, szczotkuj zęby pastą stolcową.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " masz rozjechaną autostrade zamiast dupy, Ty jebana przez stado goryli, szczotkuj zęby pastą stolcową.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Zapierdalaj TIK TAK'a ciulaty psi wentylu cyrklem w dupe ładowany przez psa sąsiada.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty zawszony bezmózgowcu, pocałuj mnie w dupę, przeczochrany wytrysku kojota.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": " Ty scyborgizowany cipolągu z Sierra Leone.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Masz takiego garba, że sznurówki zawiązujesz na stojąco, Ty śmierdzący rodzynie z dupy.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Ci stary codziennie kutasem kakao w dupie mieszał, Ty chujcu z Burkina Faso.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś pedofilskim fletem komunistycznym, grzebaj w rowie obciągańcu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ubierasz sie jak szczór na otwarcie kanału.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Lubię żółty kolor, ale Twoje zęby to przesada.",
+    "category": ["soft", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twój dziadek dzwonił, żebyś mu oddała ubrania.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Twoja mama mówi, że Cię kocha? Robi Cię w chuja!",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twój stary kocha Cię tylko w nocy.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Ty ofiaro przemmysłu gumowego.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Podniecasz się jak murzynek bateryjką.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wyglądasz jakby Cię w nocy stado murzynów ruchało.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Człowieku, czy Twoja matka ćpała jak była w ciąży?!",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Odpierwiastkuj się ode mnie Ty ilorazie nieparzysty, bo jak Cię zlogarytmuję, to Ci zbiór zębów wyjdzie poza nawias.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Spadaj na drzewo, dokończ ewolucję.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Błysnąłeś jak chrząstka w salcesonie!",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jakbym miała taką twarz jak Ty, to bym się nauczyła na niej siadać.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jakbym miał taką twarz jak Ty, to bym się nauczył na niej siadać.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Widzę, że twoja latarnia intelektu nie świeci zbyt jasno.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoje wypowiedzi nie przekraczają poziomu glonów, żyjących kilometr pod powierzchnią wody.",
+    "category": ["soft", "intelligent"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jestem chirurgiem plastycznym i szukam takiego wyzwania jak Twoja twarz .",
+    "category": ["soft", "intelligent", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoi rodzice chyba do dziś rzucają kamieniami w bociany.",
+    "category": ["soft", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Gdy Cię wiedzę mam chęć wysłać sms-a o treści \"pomagam\".",
+    "category": ["soft", "intelligent", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wiesz co zgasiła bym cię ale gówn* się nie pali.",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Generalnie rzecz biorąc, myślę, że wyglądasz na pierdopędnego, ospermionego przez stado knurów kabana.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Generalnie rzecz biorąc, myślę, że wyglądasz na pierdopędną, ospermioną przez stado knurów kabanicą.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Niech Ci kał da popalić, Ty zmutowany wytrzeszczu.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wyglądasz jak szynka w siatce - tłuszczyk Ci się wylewa.",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś łasuchem owczych odchodów, a Twój stary to prawiczek.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Eh, muszę orzec, iż zachowujesz się jak ospermiony przez nieślubne dziecko Frankensteina, bezpański kaktus.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Masz mordę jak papier ścierny, jesteś wymiętoszonym przez stado słoni z puszczy międzyrównikowej wytryskiem kojota bez ubrania.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoja stara jest taka gruba, że maluje paznokcie u lakiernika.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Wiesz co, jestem zmuszony stwierdzić, że wyglądasz na zardzewiałego, nieoświeconego wykałaczką przez bezdomne świstaki odchoda.",
+    "category": ["soft", "vulgar"],
+    "sender": ["man"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Wiesz co, jestem zmuszona stwierdzić, że wyglądasz na zardzewiałego, nieoświeconego wykałaczką przez bezdomne świstaki odchoda.",
+    "category": ["soft", "vulgar"],
+    "sender": ["woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś zapyziałym kaczym pipkiem, co się kąpie w odchodach.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ty pokurczony pampersojadzie, nafaszerowany nazistowskimi ideami żęchole nieoświecony przez stado knurów.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Heh, muszę stwierdzić, że zachowujesz się jak wściekły, spłodzony w miejscu gdzie psy chujami wodę pompują psi szczoch.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Twoja stara robi zdjęcia aparatem słuchowym",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś zakręcony jak słoik po ogórkach na zimę",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś zakręcona jak słoik po ogórkach na zimę",
+    "category": ["soft", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Ulałeś się staremu z fiuta, niechcący wpadłeś do pępka, a stara głupia kurwa wtarła Cię w pizdę, bo myślała, że to krem na odleżyny, jebany kurwa ciapaty śmieciu.",
+    "category": ["vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Ta przerwa między zębami to na rzetony?",
+    "category": ["soft"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara pracuje w bankomacie",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara jest taka tępa, że nie da się jej naostrzyć",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jestes tak przyjebany jak papa do dachu.",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jak byłeś mały to miałeś spięcie w inkubatorze.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jak byłaś mała to miałaś spięcie w inkubatorze.",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Słodzisz gorzkie żale",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Zabierz matkę bo mi pod oknem szczeka",
+    "category": ["soft", "vulgar", "stupid"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara opala się przy słoneczku z Gadu Gadu.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara obciągała Konia Trojańskiego",
+    "category": ["vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara jest zakręcona jak dziwka na róże",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Jesteś taki biedny, że jesz bigos bez kapusty.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  },
+  {
+    "sentence": "Jesteś taka biedna, że jesz bigos bez kapusty.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["woman"]
+  },
+  {
+    "sentence": "Twoja stara myje gary szczotką do kibla",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Do chrztu Cię na widłach podawali?",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Twoja stara wymyśla teksty do Tymbarka.",
+    "category": ["soft", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "",
+    "category": ["soft", "vulgar", "stupid", "suchar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man", "woman"]
+  },
+  {
+    "sentence": "Stulejarski kutasiarzu.",
+    "category": ["soft", "stupid", "vulgar"],
+    "sender": ["man", "woman"],
+    "recipient": ["man"]
+  }
+]

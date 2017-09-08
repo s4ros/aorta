@@ -7,6 +7,7 @@ import settings
 import sys
 import random
 from database import AortaDatabase
+import json
 
 
 def chan_msg(s, message):
@@ -64,7 +65,7 @@ def command_help(s, *params):
 # ----------------------------------------------------------------
 
 
-def command_points(s, *params):
+def command_bullets(s, *params):
     username = params[0]
     db = AortaDatabase()
     chatter = db.get_chatter(username)
@@ -84,5 +85,24 @@ def command_bonus(s, *params):
             db.add_money(chatter, amount)
             chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
 # ----------------------------------------------------------------
+
+
+def command_zbluzgaj(s, *params):
+    username = params[0]
+    if len(params[2]) > 0:
+        db = AortaDatabase()
+        chatter = db.get_chatter(username)
+        if chatter['money'] >= settings.bluzgi_price:
+            bluzgi = json.load(open('bluzgi.json', 'r'))
+            target = params[2][0]
+            bluzg = bluzgi[random.randint(0, len(bluzgi))]
+            wypowiedz = bluzg['sentence'].format(target)
+            chan_msg(s, "{} {}".format(target, wypowiedz))
+            db.remove_money(chatter, settings.bluzgi_price)
+        else:
+            chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
+    else:
+            chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>".format(username))
+    print("-------- bluzgaj -------")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
