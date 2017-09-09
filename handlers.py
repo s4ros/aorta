@@ -127,3 +127,7 @@ def handle_usernotice(s, *params):
     # msg-param-months=2
     # system-msg=Nimanski\sjust\ssubscribed\swith\sTwitch\sPrime.\sNimanski\ssubscribed\sfor\s2\smonths\sin\sa\srow!
     pass
+
+
+def handle_userstate(s, *params):
+    print("::::: USERSTATE params: {}".format(params))

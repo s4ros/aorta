@@ -1,6 +1,7 @@
 import threading
 import sys
 import time
+import datetime
 import requests
 import settings
 import json
@@ -81,6 +82,7 @@ class LoyaltyPointsThread(threading.Thread):
                     continue
                 chatter = db.get_chatter(nick)
                 db.add_money(chatter, settings.LOYALTY_POINTS)
+                db.update_last_seen(chatter)
         except:
             print("Unfortunately, no users in queue or smth.")
             pass

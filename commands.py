@@ -76,14 +76,16 @@ def command_bullets(s, *params):
 
 def command_bonus(s, *params):
     username = params[0]
-    target = params[2][0]
-    amount = params[2][1]
     if username in settings.PRIVILEGED:
-        db = AortaDatabase()
-        chatter = db.get_chatter(target)
-        if chatter:
-            db.add_money(chatter, amount)
-            chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
+        if len(params[2]) > 1:
+            target = params[2][0]
+            amount = params[2][1]
+            db = AortaDatabase()
+            chatter = db.get_chatter(target)
+            if chatter:
+                db.add_money(chatter, amount)
+                chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
+
 # ----------------------------------------------------------------
 
 
@@ -92,15 +94,18 @@ def command_zbluzgaj(s, *params):
     if len(params[2]) > 0:
         db = AortaDatabase()
         chatter = db.get_chatter(username)
-        if chatter['money'] >= settings.bluzgi_price:
-            bluzgi = json.load(open('bluzgi.json', 'r'))
-            target = params[2][0]
-            bluzg = bluzgi[random.randint(0, len(bluzgi))]
-            wypowiedz = bluzg['sentence'].format(target)
-            chan_msg(s, "{} {}".format(target, wypowiedz))
-            db.remove_money(chatter, settings.bluzgi_price)
+        if chatter:
+            if chatter['money'] >= settings.bluzgi_price:
+                bluzgi = json.load(open('bluzgi.json', 'r'))
+                target = params[2][0]
+                bluzg = bluzgi[random.randint(0, len(bluzgi))]
+                wypowiedz = bluzg['sentence'].format(target)
+                chan_msg(s, "{} {}".format(target, wypowiedz))
+                db.remove_money(chatter, settings.bluzgi_price)
+            else:
+                chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
         else:
-            chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
+            print("-- Didn't find online user called {}".format(username))
     else:
             chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>. Bluzganie kosztuje {} {}".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
     print("-------- bluzgaj -------")

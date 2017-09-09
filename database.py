@@ -149,6 +149,7 @@ class AortaDatabase(object):
         """.format(chatter['nick'])
         self.c.execute(query)
         self.conn.commit()
+        print("::::: update_last_seen executed: ".format(chatter['nick']))
 
     def set_time_spent(self, time):
         pass
