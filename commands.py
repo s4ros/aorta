@@ -8,6 +8,7 @@ import sys
 import random
 from database import AortaDatabase
 import json
+import datetime
 
 
 def chan_msg(s, message):
@@ -36,18 +37,18 @@ def command_ruletka(s, *params):
     username = params[0]
     db = AortaDatabase()
     chatter = db.get_chatter(username)
-    if chatter['money'] >= settings.ruletka_cost:
+    if chatter['money'] >= settings.ruletka_price:
         number_user = random.randint(1, 10)
         number_gun = random.randint(1, 10)
         txt = "{} is spinning the cylinder...".format(username)
         if number_user != number_gun:
-            txt = txt + " BANG! {} dies in slow and painful agony. You lost {} {}".format(username, settings.ruletka_cost, settings.LOYALTY_CURRENCY)
-            db.remove_money(chatter, settings.ruletka_cost)
+            txt = txt + " BANG! {} dies in slow and painful agony. You lost {} {}".format(username, settings.ruletka_price, settings.LOYALTY_CURRENCY)
+            db.remove_money(chatter, settings.ruletka_price)
         else:
             txt = txt + " *CLICK*.. Lucky you {}. Gun chamber was empty.. this time. You earned {} {}".format(username, settings.ruletka_win, settings.LOYALTY_CURRENCY)
             db.add_money(chatter, settings.ruletka_win)
     else:
-        txt = "Sorry {}, don't have enough {}. Spinning the cylinder costs {} {}".format(username, settings.LOYALTY_CURRENCY, settings.ruletka_cost, settings.LOYALTY_CURRENCY)
+        txt = "Sorry {}, don't have enough {}. Spinning the cylinder costs {} {}".format(username, settings.LOYALTY_CURRENCY, settings.ruletka_price, settings.LOYALTY_CURRENCY)
     db.close()
     chan_msg(s, txt)
 # ----------------------------------------------------------------
@@ -71,7 +72,7 @@ def command_bullets(s, *params):
     chatter = db.get_chatter(username)
     db.close()
     money = chatter['money']
-    chan_msg(s, "{}, you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
+    chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
 
 
 def command_bonus(s, *params):
@@ -85,6 +86,7 @@ def command_bonus(s, *params):
             if chatter:
                 db.add_money(chatter, amount)
                 chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
+            db.close()
 
 # ----------------------------------------------------------------
 
@@ -97,7 +99,8 @@ def command_zbluzgaj(s, *params):
         if chatter:
             if chatter['money'] >= settings.bluzgi_price:
                 bluzgi = json.load(open('bluzgi.json', 'r'))
-                target = params[2][0]
+                # target = params[2][0]
+                target = " ".join(params[2]).title()
                 bluzg = bluzgi[random.randint(0, len(bluzgi))]
                 wypowiedz = bluzg['sentence'].format(target)
                 chan_msg(s, "{} {}".format(target, wypowiedz))
@@ -106,8 +109,60 @@ def command_zbluzgaj(s, *params):
                 chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
         else:
             print("-- Didn't find online user called {}".format(username))
+        db.close()
     else:
             chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>. Bluzganie kosztuje {} {}".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
     print("-------- bluzgaj -------")
 # ----------------------------------------------------------------
+
+
+def command_gdzie(s, *params):
+    username = params[0]
+    time_now = datetime.datetime.now()
+    if len(params[2]) > 0:
+        db = AortaDatabase()
+        chatter = db.get_chatter(params[2][0])
+        if chatter:
+            last_seen = chatter['last_seen']
+            delta = time_now - datetime.datetime.strptime(last_seen, "%Y-%m-%d %H:%M:%S")
+            # print("****************** lastseen *****************")
+            # print(delta.days)
+            # print("****************** lastseen *****************")
+            if delta.days == 1:
+                days = "dzień"
+            else:
+                days = "dni"
+            chan_msg(s, "Krążą słuchy, że {} widziano tutaj ostatnio {} {} temu.".format(chatter['nick'], delta.days, days))
+        else:
+            chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(params[2][0]))
+        db.close()
 # ----------------------------------------------------------------
+
+
+def command_gamble(s, *params):
+    username = params[0]
+    txt = ""
+    if len(params[2]) > 0:
+        try:
+            amount = int(params[2][0])
+        except:
+            return
+        result = random.randint(1, 100)
+        db = AortaDatabase()
+        chatter = db.get_chatter(username)
+        if int(chatter['money']) >= amount:
+            if result <= 80:
+                txt = "Wylosowano {}. {} traci {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
+                # db.remove_money(chatter, amount)
+                amount = -amount
+            elif result > 80 and result < 95:
+                # amount = amount *
+                txt = "Wylosowano {}. {} wygrywa {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
+            elif result >= 95:
+                amount = amount * 2
+                txt = "Wylosowano {}. {} wygrywa {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
+            current_money = int(chatter['money']) + amount
+            txt += " i ma teraz {} bullets.".format(current_money)
+            db.add_money(chatter, amount)
+            chan_msg(s, txt)
+            db.close()

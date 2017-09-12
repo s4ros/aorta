@@ -34,7 +34,7 @@ LOYALTY_CURRENCY = "Hajsy"
 # path to the sqlite3 database file
 DATABASE = 'aorta_www/db.sqlite3'
 
-ruletka_cost = 15
+ruletka_price = 15
 ruletka_win = 100
 bluzgi_price = 5
 

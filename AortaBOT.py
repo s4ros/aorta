@@ -7,6 +7,7 @@ import socket
 import sys
 import time
 import queue
+import random
 
 from aorta_threads import ReceiverThread, LoyaltyPointsThread
 
@@ -41,6 +42,9 @@ class AortaBOT(object):
         self.init_handlers()
         self.queue = queue.Queue()
     # ---
+
+    def init_rng(self):
+        random.seed()
 
     def init_handlers(self):
         for key, value in list(globals().items()):
@@ -80,6 +84,7 @@ class AortaBOT(object):
 
     def run(self):
         print("Running")
+        self.init_rng()
         self.init_socket()
         self.init_threads()
         self.say_hello()
