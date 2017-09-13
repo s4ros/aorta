@@ -137,7 +137,7 @@ def command_gdzie(s, *params):
                 txt = "Najnowsze doniesienia sugerują, że widziano {} jeszcze dzisiaj!".format(chatter['nick'].title())
             chan_msg(s, txt)
         else:
-            chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(chatter['nick'].title()))
+            chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(" ".join(params[2]).title()))
         db.close()
 # ----------------------------------------------------------------
 
@@ -221,3 +221,75 @@ def command_kills(s, *params):
         wot_user = r['data'][str(settings.WOT_USER_ID)]
         stats = wot_user['statistics']['all']
         chan_msg(s, "{} zestrzeliła do tej pory {} czołgów!".format(wot_user['nickname'], stats['frags']))
+# ----------------------------------------------------------------
+
+
+def command_pogoda(s, *params):
+    if len(params[2]) > 0:
+        city = params[2][0]
+        url = 'https://www.metaweather.com/api/location/search/?query={}'.format(city)
+        city_response = requests.get(url)
+        print(city_response.json())
+        if city_response.json() != []:
+            city_json = city_response.json()[0]
+            city_id = city_json['woeid']
+            url = 'https://www.metaweather.com/api/location/{}/'.format(city_id)
+            weather_response = requests.get(url)
+            if weather_response:
+                weather_json = weather_response.json()
+                consolidated_weather = weather_json['consolidated_weather']
+                today_weather = consolidated_weather[0]
+                w = {}
+                w['date'] = today_weather['applicable_date']
+                w['current_temp'] = today_weather['the_temp']
+                w['min_temp'] = today_weather['min_temp']
+                w['max_temp'] = today_weather['max_temp']
+                w['wind_speed'] = today_weather['wind_speed']
+                w['pressure'] = today_weather['air_pressure']
+                w['humidity'] = today_weather['humidity']
+
+                txt = "Pogoda dla miasta {} na dzien {}. Aktualna temperatura: {:.2f}{}C, prędkość wiatru: {:.2f}m/s, ciśnienie: {:.2f} hPa, wilgotność powietrza: {}%".format(
+                    weather_json['title'], w['date'], w['current_temp'], chr(248),
+                    w['wind_speed'], w['pressure'], w['humidity']
+                )
+
+                print('************ pogodynka ***************')
+                print(today_weather)
+                chan_msg(s, txt)
+                print('************ pogodynka ***************')
+        else:
+            chan_msg(s, "Sorrencja, chuj Ci w dupe, miasto {} nie istnieje w międzynarodowym. Spróbuj po angolsku.".format(city.title()))
+# ----------------------------------------------------------------
+
+
+def command_lepa(s, *params):
+    username = params[0]
+    if len(params[2]) > 0:
+        db = AortaDatabase()
+        chatter = db.get_chatter(username)
+        if chatter:
+            target = " ".join(params[2])
+            target_chatter = db.get_chatter(target)
+            if target_chatter:
+                if chatter['money'] >= settings.lepa_price:
+                    hitpoints = random.randint(1, 10)
+                    db.remove_money(chatter, settings.lepa_price)
+                    target = target.title()
+                    txt = "{} wykurwia {} lepę na ryj i trafia za {}hp w główkę.".format(username, target, hitpoints)
+                    if hitpoints <= 5:
+                        txt += " {} stoi dalej na nogach! Twardziel!".format(target)
+                    else:
+                        if hitpoints > 5 and hitpoints <= 8:
+                            timeout = settings.lepa_timeout
+                        if hitpoints > 8:
+                            timeout = settings.lepa_ko_timeout
+                        txt += " {} zostaje ogłuszony na {} sekund.".format(target, timeout)
+                        s.send("PRIVMSG #{} :/timeout {} {}".format(settings.CHANNEL, target, timeout))
+                    chan_msg(s, txt)
+                else:
+                    chan_msg(s, "Za mało hajsu. !lepa kosztuje {} {}.".format(settings.lepa_price, settings.LOYALTY_CURRENCY))
+            else:
+                chan_msg(s, "Nie mogę sprzedać lepy {} z powodu nieobecności osoby.".format(target))
+        db.close()
+    else:
+        chan_msg(s, "Żeby wyjebać komuś lepę użyj: !lepa <nick>")

@@ -56,7 +56,7 @@ def handle_join(s, *params):
     username = params[0][1:].split('!')[0]
     if username.lower() == settings.NICK:
         print("-----------> Welcome message sent.")
-        # s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
+        s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
 
 # ----------------------------------------------------------------
 

@@ -21,3 +21,10 @@ class Log(models.Model):
     nick = models.ForeignKey(Chatter, related_name='logs')
     date = models.DateTimeField(default=timezone.now)
     text = models.CharField(max_length=350)
+
+
+class PlayerStats(models.Model):
+    battles = models.IntegerField(default=0)
+    wins = models.IntegerField(default=0)
+    lost = models.IntegerField(default=0)
+    draws = models.IntegerField(default=0)

@@ -71,15 +71,11 @@ class AortaBOT(object):
         self.lpt = LoyaltyPointsThread()
         self.lpt.daemon = True
         self.lpt.start()
-
-
     # ---
 
     def say_hello(self):
         self._socket.send("PASS {}".format(settings.PASS))
         self._socket.send("NICK {}".format(settings.NICK))
-    # ---
-    # ---
     # ---
 
     def run(self):
