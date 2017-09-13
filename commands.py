@@ -28,12 +28,6 @@ def command_halt(s, *params):
 # ----------------------------------------------------------------
 
 
-# def command_test(s, *params):
-#     username = params[0]
-#     chan_msg(s, "Hello {}! It's a successful test command execution.".format(username))
-# ----------------------------------------------------------------
-
-
 def command_ruletka(s, *params):
     username = params[0]
     db = AortaDatabase()

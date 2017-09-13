@@ -24,18 +24,30 @@ PRIVILEGED = [
     'aorta_bot'
 ]
 
+WOT_USER_ID = 503024637
+WOT_API_STATS = "https://api.worldoftanks.eu/wot/account/info/?application_id=demo&account_id={}".format(WOT_USER_ID)
+
 # interval time in seconds
-LOYALTY_INTERVAL = 10
+LOYALTY_INTERVAL = 60
 # how many points will be added when INTERVAL will pass
-LOYALTY_POINTS = 100
+LOYALTY_POINTS = 1
 # the uber name of your own Currency
 LOYALTY_CURRENCY = "Hajsy"
 
 # path to the sqlite3 database file
 DATABASE = 'aorta_www/db.sqlite3'
 
+# price for triggering !lepa
+lepa_price = 10
+lepa_timeout = 1
+lepa_ko_timeout = 10
+
+# price for triggering !ruletka
 ruletka_price = 15
+# amount of LOYALTY_POINTS that user would receive if he survived the !ruletka
 ruletka_win = 100
+
+# price for triggering !zbluzgaj
 bluzgi_price = 5
 
 # ads
