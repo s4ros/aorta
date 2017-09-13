@@ -48,7 +48,7 @@ def command_ruletka(s, *params):
             txt = txt + " *CLICK*.. Lucky you {}. Gun chamber was empty.. this time. You earned {} {}".format(username, settings.ruletka_win, settings.LOYALTY_CURRENCY)
             db.add_money(chatter, settings.ruletka_win)
     else:
-        txt = "Sorry {}, don't have enough {}. Spinning the cylinder costs {} {}".format(username, settings.LOYALTY_CURRENCY, settings.ruletka_price, settings.LOYALTY_CURRENCY)
+        txt = "Sorry {} you don't have enough {}. Spinning the cylinder costs {} {}".format(username, settings.LOYALTY_CURRENCY, settings.ruletka_price, settings.LOYALTY_CURRENCY)
     db.close()
     chan_msg(s, txt)
 # ----------------------------------------------------------------
@@ -125,9 +125,6 @@ def command_gdzie(s, *params):
         if chatter:
             last_seen = chatter['last_seen']
             delta = time_now - datetime.datetime.strptime(last_seen, "%Y-%m-%d %H:%M:%S")
-            # print("****************** lastseen *****************")
-            # print(delta.days)
-            # print("****************** lastseen *****************")
             if delta.days == 1:
                 days = "dzień"
             else:
@@ -153,10 +150,8 @@ def command_gamble(s, *params):
         if int(chatter['money']) >= amount:
             if result <= 80:
                 txt = "Wylosowano {}. {} traci {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
-                # db.remove_money(chatter, amount)
                 amount = -amount
             elif result > 80 and result < 95:
-                # amount = amount *
                 txt = "Wylosowano {}. {} wygrywa {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
             elif result >= 95:
                 amount = amount * 2
@@ -166,3 +161,22 @@ def command_gamble(s, *params):
             db.add_money(chatter, amount)
             chan_msg(s, txt)
             db.close()
+
+
+def command_love(s, *params):
+    username = params[0]
+    if len(params[2]) > 0:
+        love = "".join(params[2])
+        concat = "".join([username, love]).upper()
+        concat = concat.replace(" ", "")
+        love_meter = 0
+        for l in concat:
+            love_meter += ord(l)
+        love_meter %= 101
+        if love_meter <= 50:
+            txt = "Sorry {} lepiej będzie, jak sobie odpuścisz. Szanse na miłość między Tobą a {} wynoszą zaledwie {}%".format(username, " ".join(params[2]), love_meter)
+        if love_meter > 50 and love_meter < 75:
+            txt = "{} między Tobą a {} jest chemia. Podkręć bajerę i uderzaj ;) Wasze szanse wynoszą {}%".format(username, " ".join(params[2]), love_meter)
+        if love_meter >= 75:
+            txt = "{} to prawdziwa miłość! Czym prędzej umów się z {} i róbcie dzieci! Macie {}% szans!".format(username, " ".join(params[2]), love_meter)
+        chan_msg(s, txt)

@@ -9,17 +9,9 @@ import time
 from commands import *
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-
-# ----------------------------------------------------------------------------
-# static vars decorator
+from decorators import static_vars
 
 
-def static_vars(**kwargs):
-    def decorate(func):
-        for k in kwargs:
-            setattr(func, k, kwargs[k])
-        return func
-    return decorate
 # ----------------------------------------------------------------------------
 
 # bot commands initialization function
@@ -77,8 +69,8 @@ def handle_part(s, *params):
 
 @static_vars(counter=0)
 def handle_privmsg(s, *params):
+    handle_privmsg.counter += 1
     if settings.adv:
-        handle_privmsg.counter += 1
         if handle_privmsg.counter >= settings.adv_step:
             num = random.randint(0, len(settings.adverts) - 1)
             print("\n::::: NUM ::::: {} ::::::".format(num))
@@ -119,7 +111,7 @@ def handle_usernotice(s, *params):
     """
     @badges=subscriber/0,premium/1;color=#19B34A;display-name=Nimanski;emotes=;id=5b3968b0-19c5-46cf-bf1a-28eff7c83d41;login=nimanski;mod=0;msg-id=resub;msg-param-months=2;msg-param-sub-plan-name=Dr\sDisRespect;msg-param-sub-plan=Prime;room-id=17337557;subscriber=1;system-msg=Nimanski\sjust\ssubscribed\swith\sTwitch\sPrime.\sNimanski\ssubscribed\sfor\s2\smonths\sin\sa\srow!;tmi-sent-ts=1498078543927;turbo=0;user-id=69832970;user-type= :tmi.twitch.tv USERNOTICE #drdisrespectlive :Go Doc, keep dominating these blonde banged snot nosed punks! yeahyeahyeahyeahyeahyeahyeahyeahyeahyeahyeahyeah.. RAAAUULLLLLLLLLL!
 """
-    print("{}::USERNOTICE".format(who))
+    print("::::::USERNOTICE::params::{}".format(params))
     ######## useful shit
     # display-name=Nimanski
     # login=nimanski
@@ -130,4 +122,4 @@ def handle_usernotice(s, *params):
 
 
 def handle_userstate(s, *params):
-    print("::::: USERSTATE params: {}".format(params))
+    print(":::::USERSTATE::params::{}".format(params))
