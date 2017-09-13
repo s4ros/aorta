@@ -105,7 +105,9 @@ def command_zbluzgaj(s, *params):
                 target = " ".join(params[2]).title()
                 bluzg = bluzgi[random.randint(0, len(bluzgi))]
                 wypowiedz = bluzg['sentence'].format(target)
-                chan_msg(s, "{} {}".format(target, wypowiedz))
+                icons = ['Kappa', 'Kreygasm', 'MingLee', 'Keepo', 'NotLikeThis']
+                icon = random.choice(icons)
+                chan_msg(s, "{} {} {}".format(target, wypowiedz, icon))
                 db.remove_money(chatter, settings.bluzgi_price)
             else:
                 chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
@@ -293,3 +295,4 @@ def command_lepa(s, *params):
         db.close()
     else:
         chan_msg(s, "Żeby wyjebać komuś lepę użyj: !lepa <nick>")
+# ----------------------------------------------------------------
