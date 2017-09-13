@@ -5,20 +5,19 @@ Simple and fun Twitch Bot written in Python 3 :)
 ## Currently supported commands
 
 - `!ruletka` - Russian Roulette implementation.
-- `!points` - check user ~Revlo~ points. If requested more than once within **X** minutes, the answer will go as whisper.
+- `!points` - check user loyalty points.
 - `!pogoda <capital city>` - _example: !pogoda warsaw_, returns some useful info about current atmospheric conditions. (in Polish)
-- `!lepa <nick>` - slaps _<nick>_ into the face. If eough hitpoints were dealt to the targeted _<nick>_ he will be timeouted. (in Polish)
-- `!love <nick>` - counts the percentage changes of you getting laid with _<nick>_
+- `!lepa <nick>` - slaps _nick_ into the face. If eough hitpoints were dealt to the targeted _nick_ he will be timeouted. (in Polish)
+- `!love <nick>` - counts the percentage changes of you getting laid with _nick_
 - `!gamble <amount>` - typical hazardous engine :)
-- `!gdzie <nick>` - returns the time period in days when _<nick>_ was last seen.
-- `!zbluzgaj <nick>` - will swear towards _<nick>_
+- `!gdzie <nick>` - returns the time period in days when _nick_ was last seen.
+- `!zbluzgaj <nick>` - will swear towards _nick_
 
 ## World Of Tanks Statistics API integration
 
 - `!kills` - returns the number of all opponents fragged by you from the begining of time.
 - `!ostatniagra` - returns the timestamp of the last played game of yours.
 - `!trees` - returns the total count of trees that were cut by you sitting in the tank.
--
 
 ## Not yet implemented / Ideas
 - ~automatic loyalty bonus points for follow/subscribtion~
