@@ -197,10 +197,7 @@ def command_drzewa(s, *params):
         wot_user = r['data'][str(settings.WOT_USER_ID)]
         stats = wot_user['statistics']
         trees_count = stats['trees_cut']
-        if (trees_count % 2) == 0:
-            noun = "drzewa"
-        else:
-            noun = "drzew"
+        noun = "drzew"
         chan_msg(s, "Do tej pory {} ścięła {} {}.".format(wot_user['nickname'], trees_count, noun))
 # ----------------------------------------------------------------
 
