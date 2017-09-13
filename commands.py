@@ -9,6 +9,7 @@ import random
 from database import AortaDatabase
 import json
 import datetime
+import requests
 
 
 def chan_msg(s, message):
@@ -73,6 +74,7 @@ def command_bullets(s, *params):
     db.close()
     money = chatter['money']
     chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
+# ----------------------------------------------------------------
 
 
 def command_bonus(s, *params):
@@ -165,6 +167,7 @@ def command_gamble(s, *params):
             db.add_money(chatter, amount)
             chan_msg(s, txt)
             db.close()
+# ----------------------------------------------------------------
 
 
 def command_love(s, *params):
@@ -184,3 +187,40 @@ def command_love(s, *params):
         if love_meter >= 75:
             txt = "{} to prawdziwa miłość! Czym prędzej umów się z {} i róbcie dzieci! Macie {}% szans!".format(username, " ".join(params[2]).title(), love_meter)
         chan_msg(s, txt)
+# ----------------------------------------------------------------
+
+
+def command_drzewa(s, *params):
+    response = requests.get(settings.WOT_API_STATS)
+    if response:
+        r = response.json()
+        wot_user = r['data'][str(settings.WOT_USER_ID)]
+        stats = wot_user['statistics']
+        trees_count = stats['trees_cut']
+        if (trees_count % 2) == 0:
+            noun = "drzewa"
+        else:
+            noun = "drzew"
+        chan_msg(s, "Do tej pory {} ścięła {} {}.".format(wot_user['nickname'], trees_count, noun))
+# ----------------------------------------------------------------
+
+
+def command_ostatniagra(s, *params):
+    response = requests.get(settings.WOT_API_STATS)
+    if response:
+        r = response.json()
+        wot_user = r['data'][str(settings.WOT_USER_ID)]
+        epoch = wot_user['last_battle_time']
+        last_game = datetime.datetime.fromtimestamp(float(epoch))
+        fmt = "%Y-%m-%d %H:%M:%S"
+        chan_msg(s, "Ostatnia rozgrywka odbyła się {}".format(last_game.strftime(fmt)))
+# ----------------------------------------------------------------
+
+
+def command_kills(s, *params):
+    response = requests.get(settings.WOT_API_STATS)
+    if response:
+        r = response.json()
+        wot_user = r['data'][str(settings.WOT_USER_ID)]
+        stats = wot_user['statistics']['all']
+        chan_msg(s, "{} zestrzeliła do tej pory {} czołgów!".format(wot_user['nickname'], stats['frags']))
