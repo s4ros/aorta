@@ -125,13 +125,17 @@ def command_gdzie(s, *params):
         if chatter:
             last_seen = chatter['last_seen']
             delta = time_now - datetime.datetime.strptime(last_seen, "%Y-%m-%d %H:%M:%S")
-            if delta.days == 1:
-                days = "dzień"
+            if delta.days > 0:
+                if delta.days == 1:
+                    days = "dzień"
+                else:
+                    days = "dni"
+                txt = "Krążą słuchy, że {} widziano tutaj ostatnio {} {} temu.".format(chatter['nick'].title(), delta.days, days)
             else:
-                days = "dni"
-            chan_msg(s, "Krążą słuchy, że {} widziano tutaj ostatnio {} {} temu.".format(chatter['nick'], delta.days, days))
+                txt = "Najnowsze doniesienia sugerują, że widziano {} jeszcze dzisiaj!".format(chatter['nick'].title())
+            chan_msg(s, txt)
         else:
-            chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(params[2][0]))
+            chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(chatter['nick'].title()))
         db.close()
 # ----------------------------------------------------------------
 
@@ -141,7 +145,7 @@ def command_gamble(s, *params):
     txt = ""
     if len(params[2]) > 0:
         try:
-            amount = int(params[2][0])
+            amount = abs(int(params[2][0]))
         except:
             return
         result = random.randint(1, 100)
@@ -174,9 +178,9 @@ def command_love(s, *params):
             love_meter += ord(l)
         love_meter %= 101
         if love_meter <= 50:
-            txt = "Sorry {} lepiej będzie, jak sobie odpuścisz. Szanse na miłość między Tobą a {} wynoszą zaledwie {}%".format(username, " ".join(params[2]), love_meter)
+            txt = "Sorry {} lepiej będzie, jak sobie odpuścisz. Szanse na miłość między Tobą a {} wynoszą zaledwie {}%".format(username, " ".join(params[2]).title(), love_meter)
         if love_meter > 50 and love_meter < 75:
-            txt = "{} między Tobą a {} jest chemia. Podkręć bajerę i uderzaj ;) Wasze szanse wynoszą {}%".format(username, " ".join(params[2]), love_meter)
+            txt = "{} między Tobą a {} jest chemia. Podkręć bajerę i uderzaj ;) Wasze szanse wynoszą {}%".format(username, " ".join(params[2]).title(), love_meter)
         if love_meter >= 75:
-            txt = "{} to prawdziwa miłość! Czym prędzej umów się z {} i róbcie dzieci! Macie {}% szans!".format(username, " ".join(params[2]), love_meter)
+            txt = "{} to prawdziwa miłość! Czym prędzej umów się z {} i róbcie dzieci! Macie {}% szans!".format(username, " ".join(params[2]).title(), love_meter)
         chan_msg(s, txt)
