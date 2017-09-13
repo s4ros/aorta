@@ -209,8 +209,8 @@ def command_ostatniagra(s, *params):
         wot_user = r['data'][str(settings.WOT_USER_ID)]
         epoch = wot_user['last_battle_time']
         last_game = datetime.datetime.fromtimestamp(float(epoch))
-        fmt = "%Y-%m-%d %H:%M:%S"
-        chan_msg(s, "Ostatnia rozgrywka odbyła się {}".format(last_game.strftime(fmt)))
+        fmt = "%Y-%m-%d o %H:%M:%S"
+        chan_msg(s, "Ostatnia rozgrywka w WOT odbyła się dnia {}".format(last_game.strftime(fmt)))
 # ----------------------------------------------------------------
 
 
