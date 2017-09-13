@@ -24,7 +24,7 @@ PRIVILEGED = [
     'aorta_bot'
 ]
 
-WOT_USER_ID = 503024637
+WOT_USER_ID = 1234567
 WOT_API_STATS = "https://api.worldoftanks.eu/wot/account/info/?application_id=demo&account_id={}".format(WOT_USER_ID)
 
 # interval time in seconds
