@@ -12,6 +12,8 @@ Simple and fun Twitch Bot written in Python 3 :)
 - `!gamble <amount>` - typical hazardous engine :)
 - `!gdzie <nick>` - returns the time period in days when _nick_ was last seen.
 - `!zbluzgaj <nick>` - will swear towards _nick_
+- `!przekaz <username> <number>` - gives `<number>` of loyalty points to the. `<username>`. Transaction costs 10% of the original amount.
+- `!status <username>` - only for Privileged users - shows amount of loyalty points of `<username>`
 
 ## World Of Tanks Statistics API integration
 
@@ -22,7 +24,6 @@ Simple and fun Twitch Bot written in Python 3 :)
 ## Not yet implemented / Ideas
 - ~automatic loyalty bonus points for follow/subscribtion~
 - ~`!whois <username>` - checks the twitch `<username>`. Provides stuff like: how many days ago he was registered, fullname, birthdate, anything that can be harvested.~
-- ~`!give <username> <number>` - gives `<number>` of ~Revlo~ points to the. `<username>`. Cannot be executed more than once per **x** minutes.~
 - ~`!imie <imie>` - returns funny First Name definition from pre-defined dictionary~
 - ~`!sr <song>` - song request functionality~
 - ~`!skip` - skip currently playing song~
