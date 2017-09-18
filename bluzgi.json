@@ -2334,7 +2334,7 @@
     "recipient": ["man", "woman"]
   },
   {
-    "sentence": "wiesz co zgasiła bym cię ale gówn* się nie pali.",
+    "sentence": "wiesz co zgasiłbym cię ale gówn* się nie pali.",
     "category": ["soft", "vulgar", "stupid", "suchar"],
     "sender": ["man", "woman"],
     "recipient": ["man", "woman"]

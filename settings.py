@@ -27,6 +27,11 @@ PRIVILEGED = [
 WOT_USER_ID = 1234567
 WOT_API_STATS = "https://api.worldoftanks.eu/wot/account/info/?application_id=demo&account_id={}".format(WOT_USER_ID)
 
+NUDES_URL = [
+    'http://sexynerdpics.tumblr.com/random',
+    'https://ruinedgirl420.tumblr.com/random'
+]
+
 # interval time in seconds
 LOYALTY_INTERVAL = 60
 # how many points will be added when INTERVAL will pass

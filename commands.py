@@ -12,6 +12,8 @@ import datetime
 import requests
 import AortaTools
 from math import ceil
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
 
 
 def chan_msg(s, message):
@@ -360,3 +362,14 @@ def command_lepa(s, *params):
     else:
         chan_msg(s, "Żeby wyjebać komuś lepę użyj: !lepa <nick>")
 # ----------------------------------------------------------------
+
+
+def command_sendnudes(s, *params):
+    username = params[0]
+    url = random.choice(settings.NUDES_URL)
+    soup = BeautifulSoup(urlopen(url), 'html.parser')
+    tmp = soup.find_all('img')
+    for t in tmp:
+        if '.jpg' in t['src']:
+            chan_msg(s, '{} proszę bardzo, nudesek dla Ciebie: {}'.format(username.title(), t['src']))
+            break
