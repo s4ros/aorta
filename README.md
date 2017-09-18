@@ -14,6 +14,7 @@ Simple and fun Twitch Bot written in Python 3 :)
 - `!zbluzgaj <nick>` - will swear towards _nick_
 - `!przekaz <username> <number>` - gives `<number>` of loyalty points to the. `<username>`. Transaction costs 10% of the original amount.
 - `!status <username>` - only for Privileged users - shows amount of loyalty points of `<username>`
+- `!pupeczka` - returns URL of an image with nice nerdy chick on it :)
 
 ## World Of Tanks Statistics API integration
 
