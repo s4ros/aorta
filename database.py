@@ -46,8 +46,9 @@ class AortaDatabase(object):
             chatter = self.parse_db_chatter(ret.fetchone())
         except:
             chatter = None
-        print(":::::: get_online_chatter")
+        print(":::::: get_online_chatter ::::::")
         print(chatter)
+        print("::::::::::::::::::::::::::::::::")
         return chatter
 
     def add_chatter(self, nick):
@@ -149,7 +150,6 @@ class AortaDatabase(object):
         """.format(chatter['nick'])
         self.c.execute(query)
         self.conn.commit()
-        print("::::: update_last_seen executed: ".format(chatter['nick']))
 
     def set_time_spent(self, time):
         pass

@@ -7,6 +7,7 @@ import json
 import queue
 
 from database import AortaDatabase
+import AortaTools
 
 # ----------------------------------------------------------------------------
 
@@ -47,25 +48,13 @@ class LoyaltyPointsThread(threading.Thread):
         threading.Thread.__init__(self)
         self.setName('LoyaltyPointsThread')
         self.time_passed = 0
-        self.chatters_url = "http://tmi.twitch.tv/group/user/{}/chatters".format(settings.CHANNEL)
-        self.online_nicks = []
-
-    def get_online_chatters(self):
-        self.online_nicks = []
-        r = requests.get(self.chatters_url)
-        chatters = json.loads(r.content)
-        chatters = chatters['chatters']
-        people_cat = ['moderators', 'viewers']
-        for pc in people_cat:
-            for p in chatters[pc]:
-                # print("get_online_chatters - {}".format(p))
-                self.online_nicks.append(p)
+        self.online_nicks = AortaTools.get_online_chatters()
 
     def add_loyalty_points(self):
         db = AortaDatabase()
         # get all users from db
         self.database_chatters = db.get_chatters()
-        self.get_online_chatters()
+        self.online_nicks = AortaTools.get_online_chatters()
         db_nicks = []
         try:
             for nick in self.database_chatters:
