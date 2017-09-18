@@ -528,18 +528,6 @@
     "recipient": ["woman"]
   },
   {
-    "sentence": "słyszałam, że jak byłaś mała to Cię dotykali patykami, bo nie wiedzieli co to jest.",
-    "category": ["soft"],
-    "sender": ["woman"],
-    "recipient": ["woman"]
-  },
-  {
-    "sentence": "słyszałam, że jak byłeś mały to Cię dotykali patykami, bo nie wiedzieli co to jest.",
-    "category": ["soft"],
-    "sender": ["woman"],
-    "recipient": ["man"]
-  },
-  {
     "sentence": "lubię kolor złoty, ale Twoje zęby to już przesada.",
     "category": ["soft"],
     "sender": ["man", "woman"],
@@ -1632,12 +1620,6 @@
     "recipient": ["man", "woman"]
   },
   {
-    "sentence": "słyszałam, że zarabiasz dając dupy małpom z ZOO?",
-    "category": ["soft", "vulgar", "stupid"],
-    "sender": ["woman"],
-    "recipient": ["man", "woman"]
-  },
-  {
     "sentence": "Twoje ulubione jedzenie to kał z dodatkiem spermy, łoniaków i kóz z nosa.",
     "category": ["vulgar", "stupid"],
     "sender": ["man", "woman"],
@@ -1764,12 +1746,6 @@
     "recipient": ["man", "woman"]
   },
   {
-    "sentence": "słyszałam, że lubisz jak Cię walą w zad jednocześnie waląc konia.",
-    "category": ["vulgar", "stupid"],
-    "sender": ["woman"],
-    "recipient": ["man", "woman"]
-  },
-  {
     "sentence": "jesteś ssaczostolcem lubiącym napar z odchodów woźnego ze szkoły podstawowej.",
     "category": ["vulgar", "stupid"],
     "sender": ["man", "woman"],
@@ -1785,12 +1761,6 @@
     "sentence": "słyszałem, że na kolację opierdalasz śmieci segregowane z wywarem z siura żula.",
     "category": ["vulgar", "stupid"],
     "sender": ["man"],
-    "recipient": ["man", "woman"]
-  },
-  {
-    "sentence": "słyszałam, że na kolację opierdalasz śmieci segregowane z wywarem z siura żula.",
-    "category": ["vulgar", "stupid"],
-    "sender": ["woman"],
     "recipient": ["man", "woman"]
   },
   {
