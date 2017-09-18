@@ -58,7 +58,6 @@ def command_przekaz(s, *params):
     username = params[0]
     if len(params[2]) > 1:
         db = AortaDatabase()
-        print("**************** przekaz command")
         try:
             target = params[2][0]
             amount = int(params[2][1])
@@ -78,7 +77,6 @@ def command_przekaz(s, *params):
             pass
         finally:
             db.close()
-        print("**************** przekaz command")
 # ----------------------------------------------------------------
 
 
@@ -364,12 +362,19 @@ def command_lepa(s, *params):
 # ----------------------------------------------------------------
 
 
-def command_sendnudes(s, *params):
+def command_pupeczka(s, *params):
     username = params[0]
-    url = random.choice(settings.NUDES_URL)
-    soup = BeautifulSoup(urlopen(url), 'html.parser')
-    tmp = soup.find_all('img')
-    for t in tmp:
-        if '.jpg' in t['src']:
-            chan_msg(s, '{} proszę bardzo, nudesek dla Ciebie: {}'.format(username.title(), t['src']))
-            break
+    db = AortaDatabase()
+    chatter = db.get_chatter(username)
+    if chatter:
+        if chatter['money'] >= settings.nudes_price:
+            db.remove_money(chatter, settings.nudes_price)
+            url = random.choice(settings.NUDES_URL)
+            soup = BeautifulSoup(urlopen(url), 'html.parser')
+            tmp = soup.find_all('img')
+            for t in tmp:
+                if '.jpg' in t['src']:
+                    chan_msg(s, '{} proszę bardzo, pupeczka dla Ciebie za jedyne {} {}: {}'.format(username.title(), settings.nudes_price, settings.LOYALTY_CURRENCY, t['src']))
+                    break
+        else:
+            chan_msg(s, "Sorry {}. Za nudeski trzeba bulić {} {}".format(username, settings.nudes_price, settings.LOYALTY_CURRENCY))

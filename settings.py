@@ -55,6 +55,9 @@ ruletka_win = 100
 # price for triggering !zbluzgaj
 bluzgi_price = 5
 
+# price for !sendnudes
+nudes_price = 10
+
 # ads
 adv = True         # True/False - if False, advertising is disabled
 adv_step = 30
