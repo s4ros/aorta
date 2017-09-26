@@ -1,0 +1,8 @@
+---
+version: "2.0"
+services:
+  aorta:
+    image: s4ros/aorta:latest
+    container_name: aorta
+    volumes:
+      - /home/s4ros/aorta:/python
