@@ -295,39 +295,31 @@ def command_kills(s, *params):
 
 def command_pogoda(s, *params):
     if len(params[2]) > 0:
-        city = params[2][0]
-        url = 'https://www.metaweather.com/api/location/search/?query={}'.format(city)
+        city = "%20".join(params[2])
+        url = 'http://api.openweathermap.org/data/2.5/weather?APPID=4614128747f3b43fb338644febb99eed&q={}'.format(city)
         city_response = requests.get(url)
-        print(city_response.json())
-        if city_response.json() != []:
-            city_json = city_response.json()[0]
-            city_id = city_json['woeid']
-            url = 'https://www.metaweather.com/api/location/{}/'.format(city_id)
-            weather_response = requests.get(url)
-            if weather_response:
-                weather_json = weather_response.json()
-                consolidated_weather = weather_json['consolidated_weather']
-                today_weather = consolidated_weather[0]
-                w = {}
-                w['date'] = today_weather['applicable_date']
-                w['current_temp'] = today_weather['the_temp']
-                w['min_temp'] = today_weather['min_temp']
-                w['max_temp'] = today_weather['max_temp']
-                w['wind_speed'] = today_weather['wind_speed']
-                w['pressure'] = today_weather['air_pressure']
-                w['humidity'] = today_weather['humidity']
-
-                txt = "Pogoda dla miasta {} na dzien {}. Aktualna temperatura: {:.2f}{}C, prędkość wiatru: {:.2f}m/s, ciśnienie: {:.2f} hPa, wilgotność powietrza: {}%".format(
-                    weather_json['title'], w['date'], w['current_temp'], chr(248),
-                    w['wind_speed'], w['pressure'], w['humidity']
-                )
-
-                print('************ pogodynka ***************')
-                print(today_weather)
-                chan_msg(s, txt)
-                print('************ pogodynka ***************')
+        r = city_response.json()
+        if r['cod'] == 200:
+            w = {}
+            w['temp'] = "{:.2f}".format(float(r['main']['temp'])-272.15)
+            w['pressure'] = r['main']['pressure']
+            w['wind_speed'] = r['wind']['speed']
+            w['clouds'] = r['clouds']['all']
+            w['city'] = r['name']
+            txt = [
+                "Aktualna pogoda dla miasta {}:".format(w['city']),
+                "temperatura: {} st.C".format(w['temp']),
+                "ciśnienie: {} hPa".format(w['pressure']),
+                "prędkość wiatru: {} m/s".format(w['wind_speed']),
+                "zachmurzenie: {}%".format(w['clouds'])
+            ]
         else:
-            chan_msg(s, "Sorrencja, chuj Ci w dupe, miasto {} nie istnieje w międzynarodowym. Spróbuj po angolsku.".format(city.title()))
+            txt = [
+                "Coś nie pykło. Kod błędu: {}. Wiadomość: {}".format(
+                    r['cod'], r['message']
+                )
+            ]
+        chan_msg(s, ", ".join(txt))
 # ----------------------------------------------------------------
 
 
