@@ -4,5 +4,6 @@ services:
   aorta:
     image: s4ros/aorta:latest
     container_name: aorta
+    restart: always
     volumes:
       - /home/s4ros/aorta:/python
