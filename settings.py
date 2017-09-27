@@ -15,7 +15,7 @@ NICK = 'bot_nickname'
 # http://www.twitchapps.com/tmi/
 PASS = 'oauth:youroauthsecretkey'
 # your channel - twitch name
-CHANNEL = 'channel'
+CHANNEL = os.getenv('aorta_channel', 'aortabot')
 # Channel owner/streamer nickname (probably the same as CHANNEL)
 OWNER = 'your_nick'
 
@@ -42,7 +42,7 @@ LOYALTY_POINTS = 1
 LOYALTY_CURRENCY = "Hajsy"
 
 # path to the sqlite3 database file
-DATABASE = 'aorta_www/db.sqlite3'
+DATABASE = os.getenv('aorta_database', 'aorta_www/db.sqlite3')
 
 # price for triggering !lepa
 lepa_price = 10
