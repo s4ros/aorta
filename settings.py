@@ -2,6 +2,8 @@
 # settings.py file for AortaBOT.py bot
 # those settings probably won't work :)
 
+import os
+
 # Twitch IRC server address
 HOST = 'irc.chat.twitch.tv'
 # Twitch IRC server port

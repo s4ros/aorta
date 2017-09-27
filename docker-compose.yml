@@ -5,5 +5,7 @@ services:
     image: s4ros/aorta:latest
     container_name: aorta
     restart: always
+    environment:
+        - aorta_channel=aortabot
     volumes:
-      - /home/s4ros/aorta:/python
+      - ./:/python
