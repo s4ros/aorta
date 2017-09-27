@@ -49,8 +49,11 @@ def command_bullets(s, *params):
     db = AortaDatabase()
     chatter = db.get_chatter(username)
     db.close()
-    money = chatter['money']
-    chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
+    if chatter:
+        money = chatter['money']
+        chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
+    else:
+        chan_msg(s, "{} daj mi chwilkę na przeindeksowanie obecnych na czacie ludzi. Spróbuj ponownie za minutę.".format(username))
 # ----------------------------------------------------------------
 
 
