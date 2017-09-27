@@ -5,7 +5,7 @@ services:
     image: s4ros/aorta:latest
     restart: always
     environment:
-        - aorta_channel=aortabot
-        - aorta_database=aorta_www/db.sqlite3
+        - aorta_channel=${aorta_channel}
+        - aorta_database=${aorta_database}
     volumes:
       - ./:/python
