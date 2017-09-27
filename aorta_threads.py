@@ -49,12 +49,15 @@ class LoyaltyPointsThread(threading.Thread):
         self.setName('LoyaltyPointsThread')
         self.time_passed = 0
         self.online_nicks = AortaTools.get_online_chatters()
+        self.add_points = False
 
     def add_loyalty_points(self):
         db = AortaDatabase()
         # get all users from db
         self.database_chatters = db.get_chatters()
         self.online_nicks = AortaTools.get_online_chatters()
+        if settings.CHANNEL in self.online_nicks:
+            self.add_points = True
         db_nicks = []
         try:
             for nick in self.database_chatters:
@@ -70,7 +73,8 @@ class LoyaltyPointsThread(threading.Thread):
                 db.update_last_seen(chatter)
                 if nick in [settings.NICK, settings.CHANNEL]:
                     continue
-                db.add_money(chatter, settings.LOYALTY_POINTS)
+                if self.add_points:
+                    db.add_money(chatter, settings.LOYALTY_POINTS)
         except:
             print("Unfortunately, no users in queue or smth.")
             pass
