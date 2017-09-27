@@ -66,11 +66,11 @@ class LoyaltyPointsThread(threading.Thread):
                     db.add_chatter(c)
             # add money to all online users
             for nick in self.online_nicks:
+                chatter = db.get_chatter(nick)
+                db.update_last_seen(chatter)
                 if nick in [settings.NICK, settings.CHANNEL]:
                     continue
-                chatter = db.get_chatter(nick)
                 db.add_money(chatter, settings.LOYALTY_POINTS)
-                db.update_last_seen(chatter)
         except:
             print("Unfortunately, no users in queue or smth.")
             pass
