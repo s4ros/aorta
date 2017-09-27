@@ -6,5 +6,6 @@ services:
     restart: always
     environment:
         - aorta_channel=aortabot
+        - aorta_database=aorta_www/db.sqlite3
     volumes:
       - ./:/python
