@@ -1,11 +1,22 @@
 ---
 version: "2.0"
 services:
-  aorta:
+  aorta_sarosiak:
     image: s4ros/aorta:latest
     restart: always
+    container_name: aorta_sarosiak
     environment:
-        - aorta_channel=${aorta_channel}
-        - aorta_database=${aorta_database}
+        - aorta_channel=sarosiak
+        - aorta_database=sarosiak.db
+    volumes:
+      - ./:/python
+
+  aorta_laskint:
+    image: s4ros/aorta:latest
+    restart: always
+    container_name: aorta_laskint
+    environment:
+        - aorta_channel=laskint
+        - aorta_database=laskint.db
     volumes:
       - ./:/python
