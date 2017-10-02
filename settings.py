@@ -39,7 +39,7 @@ LOYALTY_INTERVAL = 60
 # how many points will be added when INTERVAL will pass
 LOYALTY_POINTS = 1
 # the uber name of your own Currency
-LOYALTY_CURRENCY = "Hajsy"
+LOYALTY_CURRENCY = os.getenv('aorta_currency', "bullets")
 
 # path to the sqlite3 database file
 DATABASE = os.getenv('aorta_database', 'aorta_www/db.sqlite3')
@@ -61,7 +61,7 @@ bluzgi_price = 5
 nudes_price = 10
 
 # ads
-adv = True         # True/False - if False, advertising is disabled
+adv = os.getenv("aorta_adv", False)         # True/False - if False, advertising is disabled
 adv_step = 30
 adv_fb = 'https://facebook.com/AortaBOT'
 adv_twitter = 'https://twitter.com/AortaBOT'
