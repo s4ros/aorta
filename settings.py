@@ -62,7 +62,7 @@ nudes_price = 10
 
 # ads
 adv = bool(os.getenv("aorta_adv", "False"))         # True/False - if False,) advertising is disabled
-# adv_step = 30
+adv_step = 30
 # adv_fb = 'https://facebook.com/AortaBOT'
 # adv_twitter = 'https://twitter.com/AortaBOT'
 # adverts = [
