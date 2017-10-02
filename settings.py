@@ -61,18 +61,20 @@ bluzgi_price = 5
 nudes_price = 10
 
 # ads
-adv = os.getenv("aorta_adv", False)         # True/False - if False, advertising is disabled
-adv_step = 30
-adv_fb = 'https://facebook.com/AortaBOT'
-adv_twitter = 'https://twitter.com/AortaBOT'
-adverts = [
-    "Witam na kanale #{}! Zapraszam do śledzenia FB-{} / Twitter-{} czy cokolwiek".format(CHANNEL, adv_fb, adv_twitter),
-    "Super randomowa reklama #2",
-    "Jakis inny randomowy tekst, ktorym bot bedzie przemawial od czasu do czasu #3"
-]
+adv = bool(os.getenv("aorta_adv", "False"))         # True/False - if False,) advertising is disabled
+# adv_step = 30
+# adv_fb = 'https://facebook.com/AortaBOT'
+# adv_twitter = 'https://twitter.com/AortaBOT'
+# adverts = [
+    # "Witam na streamie! Zapraszam do śledzenia FB {}".format(adv_fb),
+    # "Super randomowa reklama #2",
+    # "Jakis inny randomowy tekst, ktorym bot bedzie przemawial od czasu do czasu #3",
+    # "Nasza waluta to {}. Każda minuta spędzona na streamie daje Ci 1 {}. Walutę można wykorzystać do !ruletka lub !zbluzgaj. Dostępne komendy !help. Więcej funkcjonalności wkrótce :)".format(LOYALTY_CURRENCY, LOYALTY_CURRENCY),
+# ]
 
 # you should use your own local_settings.py settings
 try:
     from local_settings import *
 except:
+    print("zesraly sie local_settings przy imporcie")
     pass

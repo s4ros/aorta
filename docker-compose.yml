@@ -8,15 +8,7 @@ services:
     environment:
         - aorta_channel=sarosiak
         - aorta_database=sarosiak.db
-    volumes:
-      - ./:/python
-
-  aorta_laskint:
-    image: s4ros/aorta:latest
-    restart: always
-    container_name: aorta_laskint
-    environment:
-        - aorta_channel=laskint
-        - aorta_database=laskint.db
+        - aorta_adv=False
+        - aorta_currency=hajsy
     volumes:
       - ./:/python
