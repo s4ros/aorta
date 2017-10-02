@@ -2,12 +2,14 @@
 
 Simple and fun Twitch Bot written in Python 3 :)
 
+You can test the latest stable version on https://twitch.tv/aortabot :) 
+
 ## Currently supported commands
 
 - `!ruletka` - Russian Roulette implementation.
 - `!points` - check user loyalty points.
 - `!pogoda <capital city>` - _example: !pogoda warsaw_, returns some useful info about current atmospheric conditions. (in Polish)
-- `!lepa <nick>` - slaps _nick_ into the face. If eough hitpoints were dealt to the targeted _nick_ he will be timeouted. (in Polish)
+- `!lepa <nick>` - slaps _nick_ into the face. If enough hitpoints were dealt to the targeted _nick_ he will be timeouted. (in Polish)
 - `!love <nick>` - counts the percentage changes of you getting laid with _nick_
 - `!gamble <amount>` - typical hazardous engine :)
 - `!gdzie <nick>` - returns the time period in days when _nick_ was last seen.
