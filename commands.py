@@ -47,13 +47,17 @@ def command_help(s, *params):
 def command_bullets(s, *params):
     username = params[0]
     db = AortaDatabase()
+    if len(params[2]) > 0:
+        if username in settings.PRIVILEGED:
+            username = " ".join(params[2])
     chatter = db.get_chatter(username)
     db.close()
     if chatter:
         money = chatter['money']
         chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
     else:
-        chan_msg(s, "{} daj mi chwilkę na przeindeksowanie obecnych na czacie ludzi. Spróbuj ponownie za minutę.".format(username))
+        chan_msg(s, "{} nie mam Cię w bazie. Spróbuj ponownie na ok. minutę.".format(username.title()))
+    print('-----------------------bullets------------------------------')
 # ----------------------------------------------------------------
 
 
@@ -83,16 +87,16 @@ def command_przekaz(s, *params):
 # ----------------------------------------------------------------
 
 
-def command_status(s, *params):
-    username = params[0]
-    if username in settings.PRIVILEGED:
-        if len(params[2]) > 0:
-            db = AortaDatabase()
-            target = params[2][0]
-            chatter = db.get_chatter(target)
-            if chatter:
-                chan_msg(s, "{} ma w tej chwili {} {}.".format(chatter['nick'], chatter['money'], settings.LOYALTY_CURRENCY))
-            db.close()
+# def command_status(s, *params):
+#     username = params[0]
+#     if username in settings.PRIVILEGED:
+#         if len(params[2]) > 0:
+#             db = AortaDatabase()
+#             target = params[2][0]
+#             chatter = db.get_chatter(target)
+#             if chatter:
+#                 chan_msg(s, "{} ma w tej chwili {} {}.".format(chatter['nick'], chatter['money'], settings.LOYALTY_CURRENCY))
+#             db.close()
 # ----------------------------------------------------------------
 
 
