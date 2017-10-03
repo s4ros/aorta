@@ -92,7 +92,7 @@ def command_status(s, *params):
             chatter = db.get_chatter(target)
             if chatter:
                 chan_msg(s, "{} ma w tej chwili {} {}.".format(chatter['nick'], chatter['money'], settings.LOYALTY_CURRENCY))
-    db.close()
+            db.close()
 # ----------------------------------------------------------------
 
 
