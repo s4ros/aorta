@@ -31,7 +31,8 @@ WOT_API_STATS = "https://api.worldoftanks.eu/wot/account/info/?application_id=de
 
 NUDES_URL = [
     'http://sexynerdpics.tumblr.com/random',
-    'https://ruinedgirl420.tumblr.com/random'
+    'https://ruinedgirl420.tumblr.com/random',
+    'https://aortabot.tumblr.com/random'
 ]
 
 # interval time in seconds
