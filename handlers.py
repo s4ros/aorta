@@ -72,9 +72,9 @@ def handle_privmsg(s, *params):
     handle_privmsg.counter += 1
     if settings.adv:
         if handle_privmsg.counter >= settings.adv_step:
-            num = random.randint(0, len(settings.adverts) - 1)
-            print("\n::::: NUM ::::: {} ::::::".format(num))
-            s.send("PRIVMSG #{} :{}".format(settings.CHANNEL, settings.adverts[num]))
+            # num = random.randint(0, len(settings.adverts) - 1)
+            # print("\n::::: NUM ::::: {} ::::::".format(num))
+            # s.send("PRIVMSG #{} :{}".format(settings.CHANNEL, settings.adverts[num]))
             handle_privmsg.counter = 0
     username = params[1].split('!', 1)[0][1:]
     text = params[3].split(':', 1)[1]
