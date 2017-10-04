@@ -33,6 +33,7 @@ NUDES_URL = [
     'http://sexynerdpics.tumblr.com/random',
     'https://fitsexygirls.tumblr.com/random',
     'https://ruinedgirl420.tumblr.com/random',
+    'https://hot-cosplay-babes.tumblr.com/random',
     'https://aortabot.tumblr.com/random'
 ]
 
