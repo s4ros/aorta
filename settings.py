@@ -62,10 +62,10 @@ ruletka_price = 15
 ruletka_win = 100
 
 # price for triggering !zbluzgaj
-bluzgi_price = 5
+bluzgi_price = 10
 
 # price for !sendnudes
-nudes_price = 10
+nudes_price = 20
 
 # ads
 adv = bool(os.getenv("aorta_adv", "False"))         # True/False - if False,) advertising is disabled
