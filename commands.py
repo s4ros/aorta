@@ -57,7 +57,6 @@ def command_bullets(s, *params):
         chan_msg(s, "{} you've got {} {}".format(username, money, settings.LOYALTY_CURRENCY))
     else:
         chan_msg(s, "{} nie mam Cię w bazie. Spróbuj ponownie na ok. minutę.".format(username.title()))
-    print('-----------------------bullets------------------------------')
 # ----------------------------------------------------------------
 
 
@@ -84,6 +83,8 @@ def command_przekaz(s, *params):
             pass
         finally:
             db.close()
+    else:
+        chan_msg(s, "{} tak to się robi: !przekaz <nick> <kwota>".format(username.title()))
 # ----------------------------------------------------------------
 
 
@@ -133,6 +134,10 @@ def command_bonus(s, *params):
                 db.add_money(chatter, amount)
                 chan_msg(s, "{} receives additional {} {}".format(target, amount, settings.LOYALTY_CURRENCY))
             db.close()
+        else:
+            chan_msg(s, "{} tak to się robi: !bonus <nick> <kwota>".format(username.title()))
+    else:
+        chan_msg(s, "Sorry {} nie masz odpowiednich uprawnień.".format(username.title()))
 # ----------------------------------------------------------------
 
 
@@ -156,6 +161,10 @@ def command_bonusall(s, *params):
                 pass
             finally:
                 db.close()
+        else:
+            chan_msg(s, "{} tak to się robi: !bonusall <kwota>".format(username.title()))
+    else:
+        chan_msg(s, "Sorry {} nie masz odpowiednich uprawnień.".format(username.title()))
 # ----------------------------------------------------------------
 
 
@@ -182,7 +191,6 @@ def command_zbluzgaj(s, *params):
         db.close()
     else:
             chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>. Bluzganie kosztuje {} {}".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
-    print("-------- bluzgaj -------")
 # ----------------------------------------------------------------
 
 
@@ -212,6 +220,8 @@ def command_gdzie(s, *params):
         else:
             chan_msg(s, "Niestety, nigdy w życiu nie widziałem tutaj {}.".format(" ".join(params[2]).title()))
         db.close()
+    else:
+        chan_msg(s, "{} tak to się robi: !gdzie <nick>".format(username.title()))
 # ----------------------------------------------------------------
 
 
@@ -240,6 +250,8 @@ def command_gamble(s, *params):
             db.add_money(chatter, amount)
             chan_msg(s, txt)
             db.close()
+    else:
+        chan_msg(s, "{} tak to się robi: !gamble <kwota>".format(username.title()))
 # ----------------------------------------------------------------
 
 
@@ -260,6 +272,8 @@ def command_love(s, *params):
         if love_meter >= 75:
             txt = "{} to prawdziwa miłość! Czym prędzej umów się z {} i róbcie dzieci! Macie {}% szans!".format(username, " ".join(params[2]).title(), love_meter)
         chan_msg(s, txt)
+    else:
+        chan_msg(s, "{} tak to się robi: !love <nick>".format(username.title()))
 # ----------------------------------------------------------------
 
 
