@@ -195,6 +195,7 @@ def command_zbluzgaj(s, *params):
 
 
 def command_gdzie(s, *params):
+    username = params[0]
     time_now = datetime.datetime.now()
     if len(params[2]) > 0:
         db = AortaDatabase()
