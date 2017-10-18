@@ -98,7 +98,7 @@ def handle_privmsg(s, *params):
             if soup.title:
                 print(soup.title.text)
                 title = u''.join(soup.title.text)
-                s.send(u"PRIVMSG #{} :{}: {}".format(settings.CHANNEL, url, title))
+                s.send(u"PRIVMSG #{} :{} - {}".format(settings.CHANNEL, url, title))
         except:
             print("=/=/=/=/=/= ULR {} didn't open. Exception.".format(url))
             pass
