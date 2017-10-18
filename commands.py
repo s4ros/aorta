@@ -21,7 +21,7 @@ def chan_msg(s, message):
 # ----------------------------------------------------------------
 
 
-def command_halt(s, *params):
+def command_restart(s, *params):
     username = params[0]
     if username in settings.PRIVILEGED:
         chan_msg(s, "Hereby, I'm sentenced to death. Good bye, cruel world!")
