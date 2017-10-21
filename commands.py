@@ -238,12 +238,12 @@ def command_gamble(s, *params):
         db = AortaDatabase()
         chatter = db.get_chatter(username)
         if int(chatter['money']) >= amount:
-            if result <= 80:
+            if result <= 50:
                 txt = "Wylosowano {}. {} traci {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
                 amount = -amount
-            elif result > 80 and result < 95:
+            elif result > 50 and result < 85:
                 txt = "Wylosowano {}. {} wygrywa {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
-            elif result >= 95:
+            elif result >= 85:
                 amount = amount * 2
                 txt = "Wylosowano {}. {} wygrywa {} {}".format(result, username, amount, settings.LOYALTY_CURRENCY)
             current_money = int(chatter['money']) + amount
