@@ -229,6 +229,10 @@ def command_gdzie(s, *params):
 def command_gamble(s, *params):
     username = params[0]
     txt = ""
+    # ---------------- delete from here
+    chan_msg("Gamble zablokowany do odwołania. Powróci z najnowszym updejtem funkcjonalności bota Kappa")
+    return
+    # ---------------- delete until here
     if len(params[2]) > 0:
         try:
             amount = abs(int(params[2][0]))
