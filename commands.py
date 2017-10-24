@@ -409,7 +409,7 @@ def command_status(s, *params):
 
 def command_user(s, *params):
     username = params[0]
-    if len(params[2]) > 1:
+    if len(params[2]) > 0:
         tocheck = " ".join(params[2])
         user = AortaTools.get_twitch_user_info(tocheck)
         print("-------------------------------------------------------")
