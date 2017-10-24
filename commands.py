@@ -418,3 +418,5 @@ def command_user(s, *params):
         print("-------------------------------------------------------")
         if user:
             chan_msg(s, "{} user ID: {}".format(tocheck, user['id']))
+        else:
+            chan_msg("Cos sie spierdolilo.. {}: {}".format(tocheck, user))
