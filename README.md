@@ -17,7 +17,7 @@ You can test the latest stable version on https://twitch.tv/aortabot :)
 - `!przekaz <username> <number>` - gives `<number>` of loyalty points to the. `<username>`. Transaction costs 10% of the original amount.
 - `!status <username>` - only for Privileged users - shows amount of loyalty points of `<username>`
 - `!pupeczka` - returns URL of an image with nice nerdy chick on it :)
-- `!follow [nick]` - `[nick]` is optimal parameter. Bot wil return number of days you're following the broadcaster's channel (or the person you provide as `[nick]`)
+- `!follow [nick]` - `[nick]` is optional parameter. Bot wil return number of days you're following the broadcaster's channel (or the person you provide as `[nick]`)
 - `!user <nick>` - returns `user id` from Twitch API
 
 ## World Of Tanks Statistics API integration
