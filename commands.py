@@ -412,11 +412,26 @@ def command_user(s, *params):
     if len(params[2]) > 0:
         tocheck = " ".join(params[2])
         user = AortaTools.get_twitch_user_info(tocheck)
-        print("-------------------------------------------------------")
-        print("checking user {}".format(tocheck))
-        print(user)
-        print("-------------------------------------------------------")
         if user:
             chan_msg(s, "{} user ID: {}".format(tocheck, user['id']))
         else:
             chan_msg("Cos sie spierdolilo.. {}: {}".format(tocheck, user))
+
+
+def command_follow(s, *params):
+    username = params[0]
+    bnick = settings.CHANNEL
+    if len(params[2]) > 0:
+        bnick = " ".join(params[2])
+    broadcaster = AortaTools.get_twitch_user_info(bnick)
+    user = AortaTools.get_twitch_user_info(username)
+    if broadcaster and user:
+        response = AortaTools.get_twitch_follow_time(user['id'], broadcaster['id'])
+        if response:
+            today = datetime.datetime.now()
+            date = datetime.datetime.strptime(response['followed_at'],
+                                              "%Y-%m-%dT%H:%M:%SZ")
+            delta = today - date
+            chan_msg(s, "Follow od {} dni".format(delta.days))
+    else:
+        chan_msg(s, "Spierdoliłoś:{}:{}".format(user, broadcaster))

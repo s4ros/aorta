@@ -26,3 +26,14 @@ def get_twitch_user_info(username):
     r = requests.get(url, headers=headers)
     if r:
         return r.json()['data'][0]
+
+
+def get_twitch_follow_time(from_id, to):
+    url = 'https://api.twitch.tv/helix/users/follows?from_id={}&to_id={}'.format(from_id, to)
+    headers = {
+        'Client-ID': '{}'.format(settings.TWITCH_CLIENT_ID),
+        'Authorization': 'OAuth {}'.format(settings.TWITCH_KEY)
+    }
+    r = requests.get(url, headers=headers)
+    if r.json()['data']:
+        return r.json()['data'][0]
