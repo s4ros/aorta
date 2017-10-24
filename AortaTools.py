@@ -14,3 +14,15 @@ def get_online_chatters():
         for p in chatters[pc]:
             online_nicks.append(p)
     return online_nicks
+
+
+def get_twitch_user_info(username):
+    url = 'https://api.twitch.tv/helix/users?login={}'.format(username)
+    headers = {
+        'Client-ID': '{}'.format(settings.TWITCH_CLIENT_ID),
+        'Authorization': 'OAuth {}'.format(settings.TWITCH_KEY)
+    }
+
+    r = requests.get(url, headers=headers)
+    if r:
+        return r.json()['data'][0]

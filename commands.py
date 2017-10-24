@@ -405,3 +405,12 @@ def command_status(s, *params):
     else:
         txt = "Broadcaster {} is offline. FeelsBadMan".format(settings.CHANNEL)
     chan_msg(s, txt)
+
+
+def command_user(s, *params):
+    username = params[0]
+    if len(params[2]) > 1:
+        tocheck = " ".join(params[2])
+        user = AortaTools.get_twitch_user_info(tocheck)
+        if user:
+            chan_msg(s, "{} user ID: {}".format(tocheck, user['id']))
