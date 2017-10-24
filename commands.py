@@ -229,10 +229,10 @@ def command_gdzie(s, *params):
 def command_gamble(s, *params):
     username = params[0]
     txt = ""
-    # ---------------- delete from here
-    chan_msg(s, "Gamble zablokowany do odwołania. Powróci z najnowszym updejtem funkcjonalności bota Kappa")
-    return
-    # ---------------- delete until here
+    online_nicks = AortaTools.get_online_chatters()
+    if settings.CHANNEL in online_nicks:
+        chan_msg(s, "{} wygląda na to, że stream jest online. Zakaz gamblowania podczas streamu do odwołania!".format(username))
+        return
     if len(params[2]) > 0:
         try:
             amount = abs(int(params[2][0]))
