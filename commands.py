@@ -401,7 +401,7 @@ def command_pupeczka(s, *params):
 def command_status(s, *params):
     online_nicks = AortaTools.get_online_chatters()
     if settings.CHANNEL in online_nicks:
-        txt = "Broadcaster {} online. FeelsAmaizingMan".format(settings.CHANNEL)
+        txt = "Broadcaster {} online. FeelsAmazingMan".format(settings.CHANNEL)
     else:
         txt = "Broadcaster {} is offline. FeelsBadMan".format(settings.CHANNEL)
     chan_msg(s, txt)
