@@ -432,6 +432,7 @@ def command_follow(s, *params):
             date = datetime.datetime.strptime(response['followed_at'],
                                               "%Y-%m-%dT%H:%M:%SZ")
             delta = today - date
-            chan_msg(s, "Follow od {} dni".format(delta.days))
+            chan_msg(s, "{} śledzi {} od {} dni".format(
+                username, bnick, delta.days))
     else:
         chan_msg(s, "Spierdoliłoś:{}:{}".format(user, broadcaster))
