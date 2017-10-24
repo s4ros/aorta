@@ -26,7 +26,10 @@ PRIVILEGED = [
     'aorta_bot'
 ]
 
-WOT_USER_ID = 1234567
+TWITCH_CLIENT_ID = os.getenv('aorta_twitch_clientid', '123456')
+TWITCH_KEY = os.getenv('aorta_twitch_key', '123456')
+
+WOT_USER_ID = os.getenv('aorta_wotid', "123456")
 WOT_API_STATS = "https://api.worldoftanks.eu/wot/account/info/?application_id=demo&account_id={}".format(WOT_USER_ID)
 
 NUDES_URL = [

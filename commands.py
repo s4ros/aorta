@@ -412,5 +412,9 @@ def command_user(s, *params):
     if len(params[2]) > 1:
         tocheck = " ".join(params[2])
         user = AortaTools.get_twitch_user_info(tocheck)
+        print("-------------------------------------------------------")
+        print("checking user {}".format(tocheck))
+        print(user)
+        print("-------------------------------------------------------")
         if user:
             chan_msg(s, "{} user ID: {}".format(tocheck, user['id']))
