@@ -10,5 +10,8 @@ services:
         - aorta_database=sarosiak.db
         - aorta_adv=False
         - aorta_currency=hajsy
+        - aorta_wotid=123456
+        - aorta_twitch_clientid=123456
+        - aorta_twitch_key=132456
     volumes:
       - ./:/python
