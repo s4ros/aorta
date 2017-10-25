@@ -435,4 +435,4 @@ def command_follow(s, *params):
             chan_msg(s, "{} śledzi {} od {} dni".format(
                 username, bnick, delta.days))
     else:
-        chan_msg(s, "Spierdoliłoś:{}:{}".format(user, broadcaster))
+        chan_msg(s, "Użytownik {} najprawdopodobniej nie istnieje. Sprawdź pisownię!".format(bnick.title()))
