@@ -24,7 +24,8 @@ def get_twitch_user_info(username):
     }
 
     r = requests.get(url, headers=headers)
-    if r:
+    print(r.json())
+    if r.json()['data']:
         return r.json()['data'][0]
 
 

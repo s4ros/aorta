@@ -415,7 +415,7 @@ def command_user(s, *params):
         if user:
             chan_msg(s, "{} user ID: {}".format(tocheck, user['id']))
         else:
-            chan_msg("Cos sie spierdolilo.. {}: {}".format(tocheck, user))
+            chan_msg(s, "Użytkownik {} prawdopodobnie nie istnieje".format(tocheck.title()))
 
 
 def command_follow(s, *params):
