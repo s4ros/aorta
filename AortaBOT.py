@@ -20,6 +20,17 @@ from handlers import *
 # import database class
 from database import AortaDatabase
 
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s|%(name)s.%(funcName)s|%(levelname)s|%(message)s',
+    datefmt='%s',
+    level=logging.DEBUG
+)
+
+# create logger
+logger = logging.getLogger(__name__)
+
 
 class asocket(object):
     def __init__(self, *param):
@@ -50,16 +61,16 @@ class AortaBOT(object):
         for key, value in list(globals().items()):
             if key.startswith("handle_"):
                 self.handlers[key[7:]] = value
-                print("New handler registered: {} = {}".format(key, value))
+                logger.info("New handler registered: {} = {}".format(key, value))
     # ---
 
     def init_socket(self):
         try:
             self._socket = asocket(socket.AF_INET, socket.SOCK_STREAM)
             self._socket.connect((settings.HOST, settings.PORT))
-            print("-- sockets initialized")
+            logger.debug("Sockets initialized")
         except:
-            print("-- socket/connection failed")
+            logger.critical("socket/connection failed")
             sys.exit(1)
     # ---
 
@@ -79,7 +90,7 @@ class AortaBOT(object):
     # ---
 
     def run(self):
-        print("Running")
+        logger.info("AortaBOT is running")
         self.init_rng()
         self.init_socket()
         self.init_threads()
@@ -98,15 +109,11 @@ class AortaBOT(object):
                 else:
                     pass
                 print("\n")
-                # print(params)
                 if action in self.handlers:
-                    print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
-                    print("-- Handler action required: {}".format(action))
+                    logger.info('Hanlder action for {} trigerred.'.format(action))
                     self.handlers[action](self._socket, *params)
                 else:
-                    print("-- NO HANDLER found for {}".format(action))
-                    # print(msg)
-                    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                    logger.warning('No handler found for {}'.format(action))
             except queue.Empty:
                 pass
 

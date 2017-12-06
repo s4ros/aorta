@@ -14,6 +14,9 @@ import AortaTools
 from math import ceil
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def chan_msg(s, message):
@@ -69,35 +72,22 @@ def command_przekaz(s, *params):
             amount = int(params[2][1])
             real_amount = ceil(amount + (0.1 * amount))
             chatter = db.get_chatter(username)
-            print(username, amount, target)
+            # print(username, amount, target)
             if chatter['money'] >= real_amount:
                 target_chatter = db.get_chatter(target)
                 if target_chatter:
-                    print(real_amount, chatter, target_chatter)
+                    # print(real_amount, chatter, target_chatter)
                     db.add_money(target_chatter, amount)
                     db.remove_money(chatter, real_amount)
                     cost = real_amount - amount
                     chan_msg(s, "{} oddaje {} {} na rzecz {}. Transakcja kosztowała {} {}".format(username.title(), amount, settings.LOYALTY_CURRENCY, target.title(), cost, settings.LOYALTY_CURRENCY))
         except:
-            print("wysralo sie ....")
+            logger.critical("Error during !przekaz")
             pass
         finally:
             db.close()
     else:
         chan_msg(s, "{} tak to się robi: !przekaz <nick> <kwota>".format(username.title()))
-# ----------------------------------------------------------------
-
-
-# def command_status(s, *params):
-#     username = params[0]
-#     if username in settings.PRIVILEGED:
-#         if len(params[2]) > 0:
-#             db = AortaDatabase()
-#             target = params[2][0]
-#             chatter = db.get_chatter(target)
-#             if chatter:
-#                 chan_msg(s, "{} ma w tej chwili {} {}.".format(chatter['nick'], chatter['money'], settings.LOYALTY_CURRENCY))
-#             db.close()
 # ----------------------------------------------------------------
 
 
@@ -153,12 +143,10 @@ def command_bonusall(s, *params):
                     chatter = db.get_chatter(nick)
                     if chatter:
                         db.add_money(chatter, amount)
-                print('******* online nicks****************')
-                print(online_nicks)
-                print('******* online nicks****************')
+                logger.debug("Online nicks: {}".format(' '.join(online_nicks)))
                 chan_msg(s, "Bonus dla wszystkich w postaci {} {}!".format(amount, settings.LOYALTY_CURRENCY))
-            except:
-                pass
+            except Exception as e:
+                logger.critical('Error in !bonusall: {}'.format(e))
             finally:
                 db.close()
         else:
@@ -187,7 +175,7 @@ def command_zbluzgaj(s, *params):
             else:
                 chan_msg(s, "Sorry, {}. Potrzebujesz {} {} by bluzgać innych!".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
         else:
-            print("-- Didn't find online user called {}".format(username))
+            logger.warning('Didn''t find user {}'.format(username))
         db.close()
     else:
             chan_msg(s, "{}, spróbuj tak: !zbluzgaj <nick>. Bluzganie kosztuje {} {}".format(username, settings.bluzgi_price, settings.LOYALTY_CURRENCY))
@@ -436,3 +424,18 @@ def command_follow(s, *params):
                 username, bnick, delta.days))
     else:
         chan_msg(s, "Użytownik {} najprawdopodobniej nie istnieje. Sprawdź pisownię!".format(bnick.title()))
+
+
+def command_sr(s, *params):
+    username = params[0]
+    if len(params[2]) > 0:
+        songrequest = ' '.join(params[2])
+        logger.debug('Songrequest by {}: \"{}\"'.format(
+            username,
+            songrequest
+        ))
+        chan_msg(s, '{} ')
+    else:
+        chan_msg(s, "{} naucz się korzystać z !sr".format(
+            username
+        ))

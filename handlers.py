@@ -10,7 +10,9 @@ from commands import *
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from decorators import static_vars
+import logging
 
+logger = logging.getLogger(__name__)
 
 # ----------------------------------------------------------------------------
 
@@ -22,7 +24,7 @@ def init_commands(commands):
     for key, value in globals().items():
         if key.startswith("command_"):
             commands[key[8:]] = value
-            print("New command registered: {} = {}".format(key, value))
+            logger.debug("New command registered: {} = {}".format(key, value))
 
 # ----------------------------------------------------------------
 
@@ -55,7 +57,7 @@ def handle_cap(s, *params):
 def handle_join(s, *params):
     username = params[0][1:].split('!')[0]
     if username.lower() == settings.NICK:
-        print("-----------> Welcome message sent.")
+        logger.debug("Welcome message sent.")
         s.send("PRIVMSG #{} :/me is online!\r\n".format(settings.CHANNEL))
 
 # ----------------------------------------------------------------
@@ -79,6 +81,7 @@ def handle_privmsg(s, *params):
     username = params[1].split('!', 1)[0][1:]
     text = params[3].split(':', 1)[1]
     badges = params[0][8:].split(';', 1)[0]
+    logger.info("[{}]> {}".format(username, text))
     if text[0] == '!':
         cmd = text.split(' ', 1)[0]
         cmd = cmd[1:]
@@ -96,13 +99,12 @@ def handle_privmsg(s, *params):
         try:
             soup = BeautifulSoup(urlopen(url), "html.parser")
             if soup.title:
-                print(soup.title.text)
+                logger.info('Url catched: {}'.format(soup.title.text))
                 title = u''.join(soup.title.text)
                 s.send(u"PRIVMSG #{} :{} - {}".format(settings.CHANNEL, url, title))
         except:
             print("=/=/=/=/=/= ULR {} didn't open. Exception.".format(url))
             pass
-    print("[{}]> {}".format(username, text))
 
 # ----------------------------------------------------------------
 

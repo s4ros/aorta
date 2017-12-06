@@ -8,6 +8,9 @@ import queue
 
 from database import AortaDatabase
 import AortaTools
+import logging
+
+logger = logging.getLogger(__name__)
 
 # ----------------------------------------------------------------------------
 
@@ -29,16 +32,16 @@ class ReceiverThread(threading.Thread):
                 # stringdata = data.decode('utf-8')
                 self.buffer = self.buffer + self.s.recv(1024).decode('utf-8')
                 txt = str.split(self.buffer, "\r\n")
-                print(self.name, txt)
+                # print(self.name, txt)
                 self.buffer = txt.pop()
                 for line in txt:
                     if line == "PING :tmi.twitch.tv":
-                        print('::PING::PONG::')
+                        logger.debug('PING::PONG')
                         self.s.send("PONG :tmi.twitch.tv")
                     self.q.put(line.lower())
             except:
-                print("xxx ReceiverThread sie wysypal")
-                print(sys.exc_info()[0])
+                logger.critical("ReceiverThread has critically ended")
+                logger.debug(sys.exc_info()[0])
                 # sys.exit(1)
                 pass
 
@@ -76,7 +79,7 @@ class LoyaltyPointsThread(threading.Thread):
                 if self.add_points:
                     db.add_money(chatter, settings.LOYALTY_POINTS)
         except:
-            print("Unfortunately, no users in queue or smth.")
+            log.error("Unfortunately, no users in queue or smth.")
             pass
         db.close()
 
@@ -84,9 +87,8 @@ class LoyaltyPointsThread(threading.Thread):
         while True:
             self.time_passed += 1
             if (self.time_passed % settings.LOYALTY_INTERVAL) == 0:
-                print("{} seconds have passed".format(settings.LOYALTY_INTERVAL))
+                logger.debug("{} seconds have passed".format(settings.LOYALTY_INTERVAL))
                 self.add_loyalty_points()
-                print("*" * 25)
                 self.time = 0
             time.sleep(1)
 
